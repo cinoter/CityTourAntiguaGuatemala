@@ -37,22 +37,26 @@
 // When the user clicks the marker, an info window opens.
 
 function initialize() {
-  var myLatlng = new google.maps.LatLng(14.5588871, -90.738000);
+  var myLatlng = new google.maps.LatLng(14.5567871, -90.728000);
   var coordenadasArco = new google.maps.LatLng(14.559666, -90.734259);
+  var coordenadasIglesiaMerced = new google.maps.LatLng(14.561210, -90.734190);
+  var coordenadasIglesiaSanJose=new google.maps.LatLng(14.556714, -90.732711);
+  var corrdenadasIglesiaSanFrancisco=new google.maps.LatLng(14.553993, -90.729441);
+  var corrdenadasIglesiaEscuelaCristo=new google.maps.LatLng(14.551444, -90.729783);
+  var corrdenadasIglesiaCalvario=new google.maps.LatLng(14.545278, -90.729785);
+  
+  
   var mapOptions = {
-    zoom: 15,
+    zoom: 14,
     center: myLatlng
   };
 
   var map = new google.maps.Map(document.getElementById('map-container'), mapOptions);
 
-  var contentString = 
-      '<h1>Arco de Santa Catalina</h1>'
-     
-     ;
+     //arco de santa catalina
 
   var infowindow = new google.maps.InfoWindow({
-      content: contentString
+      content: "<h2>Arco de Santa Catalina</h2>"
   });
 
   var marcadorArco = new google.maps.Marker({
@@ -63,6 +67,85 @@ function initialize() {
   google.maps.event.addListener(marcadorArco, 'click', function() {
     infowindow.open(map,marcadorArco);
   });
+  
+  
+  
+  //Iglesia de la Merced
+
+  var infoWinMerced = new google.maps.InfoWindow({
+      content: "<h2>Iglesia de la Merced</h2>"
+  });
+
+  var marcadorIglesiaMerced = new google.maps.Marker({
+      position: coordenadasIglesiaMerced,
+      map: map,
+      title: 'Iglesia de la Merced'
+  });
+  google.maps.event.addListener(marcadorIglesiaMerced, 'click', function() {
+    infoWinMerced.open(map,marcadorIglesiaMerced);
+  });
+  
+  
+   //Catedral de San Jose
+
+  var infoWinSanJose = new google.maps.InfoWindow({
+      content: "<h2>Catedran de San Jose</h2>"
+  });
+
+  var marcadorIglesiaSanJose = new google.maps.Marker({
+      position: coordenadasIglesiaSanJose,
+      map: map,
+      title: 'Catedral de San Jose'
+  });
+  google.maps.event.addListener(marcadorIglesiaSanJose, 'click', function() {
+    infoWinSanJose.open(map,marcadorIglesiaSanJose);
+  });
+  
+  //Catedral de San Francisco
+
+  var infoWinSanFrancisco = new google.maps.InfoWindow({
+      content: "<h2>Templo de San Francisco</h2> Santuario del Santo Hermano Pedro"
+  });
+
+  var marcadorIglesiaSanFrancisco = new google.maps.Marker({
+      position: corrdenadasIglesiaSanFrancisco,
+      map: map,
+      title: 'Iglesia San Francisco'
+  });
+  google.maps.event.addListener(marcadorIglesiaSanFrancisco, 'click', function() {
+    infoWinSanFrancisco.open(map,marcadorIglesiaSanFrancisco);
+  });
+  
+  //Templo de la Escuela de Cristo
+
+  var infoWinEscuelaCristo = new google.maps.InfoWindow({
+      content: "<h2>Templo de la Escuela de Cristo</h2>"
+  });
+
+  var marcadorIglesiaEscuelaCristo = new google.maps.Marker({
+      position: corrdenadasIglesiaEscuelaCristo,
+      map: map,
+      title: 'Iglesia San Francisco'
+  });
+  google.maps.event.addListener(marcadorIglesiaEscuelaCristo, 'click', function() {
+    infoWinEscuelaCristo.open(map,marcadorIglesiaEscuelaCristo);
+  });
+  
+   //Iglesia el Calvario
+
+  var infoWinCalvarioo = new google.maps.InfoWindow({
+      content: "<h2>Iglesia Ermita del Santo Calvario</h2>"
+  });
+
+  var marcadorIglesiaCalvario = new google.maps.Marker({
+      position: corrdenadasIglesiaCalvario,
+      map: map,
+      title: 'El Calvario'
+  });
+  google.maps.event.addListener(marcadorIglesiaCalvario, 'click', function() {
+    infoWinCalvarioo.open(map,marcadorIglesiaCalvario);
+  });
+  
  /*  google.maps.event.addListener(map, 'center_changed', function() {
     // 3 seconds after the center of the map has changed, pan back to the
     // marker.
