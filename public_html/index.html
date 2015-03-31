@@ -25,12 +25,25 @@
         <style>
       html { height: 100% }
       body { height: 100%; background-color:#CCC }
-      #map-outer {height: 440px; padding: 20px; border: 2px solid #CCC; margin-bottom: 20px; }
+      #map-outer { padding: 20px; border: 2px solid #CCC; margin-bottom: 40px; }
 	  #map-container { height: 400px }
-	  @media all and (max-width: 991px) {
-		#map-outer  { height: 650px }
+	  @media all and (max-width: 911px) {
+		#map-outer  { height: 40% }
 		}
     </style>
+    
+    <!-- SCRIPT PARA VER QUE ELIGIO Y EN QUE IDIOMA-->
+    <script type="text/javascript" >
+    var sitio = "address";
+    function mostrarSitio(cual)	{
+	document.getElementById(sitio).style.display = "none";
+        document.getElementById(sitio+"2").style.display = "none";
+	sitio = cual;
+	document.getElementById(sitio).style.display = "block";
+        document.getElementById(sitio+"2").style.display = "block";
+    }
+</script>
+    
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script>
 // This example displays a marker at the center of Australia.
@@ -66,6 +79,7 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorArco, 'click', function() {
     infowindow.open(map,marcadorArco);
+    //ponerIdioma('english');
   });
   
   
@@ -83,6 +97,7 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaMerced, 'click', function() {
     infoWinMerced.open(map,marcadorIglesiaMerced);
+    mostrarSitio('IMerced');
   });
   
   
@@ -99,6 +114,7 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaSanJose, 'click', function() {
     infoWinSanJose.open(map,marcadorIglesiaSanJose);
+    mostrarSitio('ISanJose');
   });
   
   //Catedral de San Francisco
@@ -114,6 +130,7 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaSanFrancisco, 'click', function() {
     infoWinSanFrancisco.open(map,marcadorIglesiaSanFrancisco);
+    mostrarSitio('ISanFrancisco');
   });
   
   //Templo de la Escuela de Cristo
@@ -125,10 +142,11 @@ function initialize() {
   var marcadorIglesiaEscuelaCristo = new google.maps.Marker({
       position: corrdenadasIglesiaEscuelaCristo,
       map: map,
-      title: 'Iglesia San Francisco'
+      title: 'Iglesia Escuela de Cristo'
   });
   google.maps.event.addListener(marcadorIglesiaEscuelaCristo, 'click', function() {
     infoWinEscuelaCristo.open(map,marcadorIglesiaEscuelaCristo);
+    mostrarSitio('IEscuelaCristo');
   });
   
    //Iglesia el Calvario
@@ -144,6 +162,7 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaCalvario, 'click', function() {
     infoWinCalvarioo.open(map,marcadorIglesiaCalvario);
+    mostrarSitio('ICalvario');
   });
   
  /*  google.maps.event.addListener(map, 'center_changed', function() {
@@ -199,71 +218,148 @@ google.maps.event.addDomListener(window, 'load', initialize);
             fue destruida en gran parte por un terremoto en 1773. Construida con arreglo a un trazado en damero inspirado
             en los principios del Renacimiento italiano, Antigua llegó a poseer en menos de tres siglos un gran número de
             monumentos soberbios.
-
+            
+                
 source: UNESCO/ERI </p>
+
         <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
       </div>
     </div>
 
+       
+    
     
   <div class="container">
   <div class="row">
       <div id="map-outer" class="col-md-12">
           <div id="map-container" class="col-md-8"></div>
-          <div id="address" class="col-md-4">
-            <h2>Nombre del Lugar</h2>
-            <p>Descripcion de lugar al que selecciono mediante el marcador ubicado en el mapa</p>
-            <address>
-            <strong>Peggy Guggenheim Collection</strong><br>
-                Dorsoduro, 701-704<br>
-                30123<br>
-                Venezia<br>
-                Italia<br>
-                <abbr>P:</abbr> +39 041 240 5411
-           </address>
+          <div id="address" class="col-md-4" >
+           
+            
           </div>
-        
-      </div><!-- /map-outer -->
-  </div> <!-- /row -->
-  </div>
-    
-    
-    
-    
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-          <div  id="map-canvas">
+          <!-- ======================== IGLESIA DE LA MERCED ================================-->
+          <div id="IMerced" class="col-md-4" style='display:none;'>
+              <h2 class="text-center">Iglesia de la Merced</h2>
+              <h4 class="text-center">6a. Avenida Norte y 1a. Calle Poniente, final de la Calle del Arco</h4>
+              <p class="text-justify">Algunos frailes de la Orden de Nuestra Señora de la Merced llegaron 
+                  a la ciudad de Santiago de los Caballeros para fundar un convento en el Valle de Almolonga.
+                  Este fue el primer monasterio para religiosos.</p>
+             
+              <p class="text-justify">Al destruirse la ciudad por la inundación ocurrida en 1541, y al trasladarse al 
+                  Valle de Panchoy, los frailes de esa Orden iniciaron la construcción de una nueva
+                  iglesia y convento, en 1546, concluyéndose en 1583. Debido a los sismos y terremotos 
+                  ocurridos en diferentes épocas, fue necesario construir otro templo, inaugurado en 1767, 
+                  siendo el que se conoce actualmente.</p>
+                        
+
               
           </div>
-          <div class="col-md-4">
-          <h2>Hola mundo</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <div id="ISanJose" class="col-md-4" style='display:none;'>
+              <h2>Iglesia San Jose</h2>
+          </div>
+            <div id="ISanFrancisco" class="col-md-4" style='display:none;'>
+              <h2>Iglesia San Francisco</h2>
+          </div>
+          <div id="IEscuelaCristo" class="col-md-4" style='display:none;'>
+              <h2>Iglesia Escuela de Cristo</h2>
+          </div>
+          <div id="ICalvario"  class="col-md-4" style='display:none;'>
+              <h2>Iglesia el Calvario</h2>
+          </div>
+          
+      </div><!-- /map-outer -->
+     
+  </div> <!-- /row -->
+       
+  </div>
+    
+    <div class="container">
+        <div class="row">
+          
+        <div id="address2" class="col-md-12" >
+        
         </div>
-      </div>
 
-      <hr>
+           <div id="IMerced2" class="col-md-12" style='display:none;'>
+               
+               <div class="col-md-4">
+                   <img src="img/IMerced/1.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
+                    <footer>
+                        <p class="text-center">Exterior de la Iglesia de la Merced</p>
+                     </footer>
+               </div>
+                <div class="col-md-4">
+                   <img src="img/IMerced/2.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
+                   <footer>
+                        <p class="text-center">Interior de la Iglesia de la Merced</p>
+                     </footer>
+               </div>
+               <div class="col-md-4">
+                   <img src="img/IMerced/3.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
+                   <footer>
+                        <p class="text-center">Altar del Santisimo</p>
+                     </footer>
+               </div>
+               
+               
+             
+                 <p class="text-justify">La fachada de la Iglesia tiene dos campanarios bajos, ocho grandes columnas salomónicas 
+                   con diseños ornamentales tallados en estuco y el escudo de esa Orden religiosa.  En las hornacinas, 
+                   se observan las imágenes de santos mercedarios; de San Pedro Nolasco, fundador de la Orden; y de 
+                   Nuestra Señora de la Merced. En 1687, el Ayuntamiento de la ciudad les otorgó un terreno en una calle que 
+                   colindaba con la parte de atrás de la iglesia. En la actualidad, esa área es el final de la Calle del Arco. 
+                  Como consecuencia del terremoto ocurrido en 1773, esta Iglesia y Convento sufrieron daños considerables.</p>
+                <div class="col-md-6">
+                    <p>En la actualidad, la Iglesia se encuentra reconstruida y es muy visitada por los feligreses para venerar a 
+                        la imagen de Nuestra Señora de la Merced, patrona de la ciudad, y a la imagen de Jesús Nazareno.</p>
+                   <img src="img/IMerced/4.jpg"  class="img-responsive img-circle center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
+                   <footer>
+                        <p class="text-center">Imagen de Nuestra Señora de la Merced</p>
+                     </footer>
+               </div>
+                 <div class="col-md-6">
+                    <p>El 3 de abril de 2004, el Consejo Municipal de La Antigua Guatemala proclamó a 
+                        Jesús Nazareno de la Merced como Protector e Intercesor de los Antigüeños.</p>
+                   <img src="img/IMerced/5.jpg"  class="img-responsive img-circle center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
+                   <footer>
+                        <p class="text-center">Imagen de Jesús Nazareno de la Merced</p>
+                     </footer>
+               </div>
+                  <div class="col-md-12">
+                 <p class="text-justify">Cada año, en Semana Santa, se prepara un huerto y una alfombra de aserrín de colores frente a la capilla de Jesús de Nazareno</p>
+                  </div>
+                 <div class="col-md-6">
+                   
+                   <img src="img/IMerced/6.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
+                   <footer>
+                        <p class="text-center">Huertos y Alfombras de Acerrin</p>
+                     </footer>
+               </div>
+                <div class="col-md-6">
+                   
+                   <img src="img/IMerced/7.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
+                   <footer>
+                        <p class="text-center">Huertos y Alfombras de Acerrin</p>
+                     </footer>
+               </div> 
+                 <div class="col-md-12">
+                 <p>Actualmente, el Convento de la Merced se encuentra en ruinas. En el interior del claustro principal de ese 
+                     Convento se encuentra una fuente, con diseño octagonal, que es considerada como la de mayor tamaño en Hispanoamérica.</p>
+                 </div>
+        </div>
 
-      <footer>
+      
+   <hr>
+   <footer>
         <p>&copy; Company 2015</p>
       </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+        </div>
+    </div>
+      
+    
+
+   
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
