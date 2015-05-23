@@ -37,7 +37,9 @@ and open the template in the editor.
   
     
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
- <script type="text/javascript" src="js/acciones_tour.js"></script> 
+         <script type="text/javascript" src="js/Mapa.js"></script>
+
+
  
     </head>
     <body onload="carga()">
@@ -47,23 +49,13 @@ and open the template in the editor.
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
           <div class="navbar-header" >
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"  aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="navbar-brand" href="#">City Tour Antigua Guatemala</a>
           <a class="navbar-brand" href="#"> <span id="minutos">0</span>:<span id="segundos">0</span></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-                <input type="text" placeholder="Lugar" class="form-control" id="ibuscar">
-            </div>
-           
-              <button type="button" class="btn btn-success" onclick="Buscar();">Buscar</button>
-              <button type="button" class="btn btn-success" onclick="showMarkers();">Cancelar</button>
+              <button type="button" class="btn btn-success" onclick="Buscar();">City GPS</button>
+              <button type="button" class="btn btn-success" onclick="salir();">Dejar tour</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>

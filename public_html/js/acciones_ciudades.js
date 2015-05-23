@@ -10,12 +10,6 @@
 
 var tour_automatico=0;  //1 es automatico  0 es manual
 var tiempo=1; //tiempo para cada estacion del tour
-
-var texto_principal = "La ciudad de Antigua, sede de la Capitanía General de Guatemala,"
-           +"fue fundada a principios del siglo XVI. Edificada a 1.500 metros de altura en una zona de sacudidas sísmicas,"
-            +"fue destruida en gran parte por un terremoto en 1773. Construida con arreglo a un trazado en damero inspirado"
-            +"en los principios del Renacimiento italiano, Antigua llegó a poseer en menos de tres siglos un gran número de"
-            +"monumentos soberbios.";
     
   function obtener_texto(){ 
       return texto_principal;
