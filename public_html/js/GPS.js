@@ -116,7 +116,13 @@ function pone_info_emergent(marcador,frase){
   }
 
 	function Busqueda(){
-		var inicio = document.getElementById("inicio").value;
+              // Try HTML5 geolocation
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var inicio = new google.maps.LatLng(position.coords.latitude,
+                                       position.coords.longitude);
+
+      		//var inicio = document.getElementById("inicio").value;
 		var fin = document.getElementById("fin").value;
                 var modo = document.getElementById("modo").value;
  
@@ -140,6 +146,18 @@ function pone_info_emergent(marcador,frase){
 	            alert("There is no directions available between these two points");
 	        }
 	    });
+
+      
+    }, function() {
+      handleNoGeolocation(true);
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleNoGeolocation(false);
+  }
+
+            
+
 	}
 google.maps.event.addDomListener(window, 'load', initialize);   
   
