@@ -116,7 +116,7 @@ function pone_info_emergent(marcador,frase){
   }
 
 	function Busqueda(){
-              // Try HTML5 geolocation
+            
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var inicio = new google.maps.LatLng(position.coords.latitude,
@@ -143,7 +143,7 @@ function pone_info_emergent(marcador,frase){
 	            //directionsDisplay.setPanel(null);
 	            directionsDisplay.setDirections(response);
 	        } else {
-	            alert("There is no directions available between these two points");
+	            alert("Error no existe ruta");
 	        }
 	    });
 
