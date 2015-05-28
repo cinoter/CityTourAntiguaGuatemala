@@ -21,16 +21,14 @@ and open the template in the editor.
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+       
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <style>
       html { height: 100% }
       body { height: 100%; background-color:#CCC }
       #map-outer { padding: 20px; border: 2px solid #CCC; margin-bottom: 40px; }
-	  #map-container { height: 600px;
-                           width: 66.66666667%
-                           }
+	  #map-container { height: 400px }
+          
 	  @media all and (max-width: 911px) {
 		#map-outer  { height: 40% }
 		}
@@ -52,7 +50,7 @@ and open the template in the editor.
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
           <div class="navbar-header" >
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"  aria-controls="navbar">
+             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"  aria-controls="navbar">
              <span class="sr-only">Toggle navigation</span>
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
@@ -62,9 +60,10 @@ and open the template in the editor.
         </div>
           <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form">
-              <button type="button" class="btn btn-success" onclick="salir();">Dejar City GPS</button>
+              <button type="button" class="btn btn-success" onclick="salir();">Dejar tour</button>
           </form>
-      </div>
+        </div><!--/.navbar-collapse -->
+         </div>
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
