@@ -12,8 +12,10 @@ var infoWin=[];
 var index =0;
  var cronometro;
 var sitio = "address";
-var r_lugar=['IMerced','ISanJose','ISanFrancisco','IEscuelaCristo','ICalvario'];
-var r_info=["<h4>Iglesia de la Merced</h4>","<h4>Catedran de San Jose</h4>","<h4>Templo de San Francisco</h4> Santuario del Santo Hermano Pedro","<h4>Templo de la Escuela de Cristo</h4>","<h4>Iglesia Ermita del Santo Calvario</h4>"];
+var r_lugar=['IAsuncion','ISanFelipe','IMerced','ISanJose','ISanPedro','ISanFrancisco','IEscuelaCristo','ICalvario'];
+var r_info=["<h4>Parroquia de Nuestra Señora de la Asunción</h4>","<h4>Santuario del Apóstol San Felipe</h4>","<h4>Iglesia de la Merced</h4>","<h4>Catedran de San Jose</h4>","<h4>Iglesia San Pedro Apóstol</h4>",
+    "<h4>Templo de San Francisco</h4> Santuario del Santo Hermano Pedro","<h4>Templo de la Escuela de Cristo</h4>",
+    "<h4>Iglesia Ermita del Santo Calvario</h4>"];
 var coordenadas=[];  
 var rutas;
 var poligono;
@@ -24,18 +26,28 @@ var poligono;
 //==============================================================================
 
 function initialize() {
-  var myLatlng = new google.maps.LatLng(14.5567871, -90.728000);
+  var myLatlng = new google.maps.LatLng(14.5617991, -90.728000);
   var coordenadasArco = new google.maps.LatLng(14.559666, -90.734259);
   var coordenadasIglesiaMerced = new google.maps.LatLng(14.561210, -90.734190);
   var coordenadasIglesiaSanJose=new google.maps.LatLng(14.556714, -90.732711);
   var corrdenadasIglesiaSanFrancisco=new google.maps.LatLng(14.553993, -90.729441);
   var corrdenadasIglesiaEscuelaCristo=new google.maps.LatLng(14.551444, -90.729783);
   var corrdenadasIglesiaCalvario=new google.maps.LatLng(14.545278, -90.729785);
+  var coordenadasSanPedroApostol=new google.maps.LatLng(14.555124, -90.732211);
+  var coordenadasParroquiaAsuncion=new google.maps.LatLng(14.574711, -90.740990); 
+  var coordenadasIglesiaSanFelipe=new google.maps.LatLng(14.573117, -90.734641);
+  
+  
+  coordenadas.push(coordenadasParroquiaAsuncion);
+  coordenadas.push(coordenadasIglesiaSanFelipe);
   coordenadas.push(coordenadasIglesiaMerced);
   coordenadas.push(coordenadasIglesiaSanJose);
+  coordenadas.push(coordenadasSanPedroApostol);//cambie de orden para que el tour sea lo mas cercano
   coordenadas.push(corrdenadasIglesiaSanFrancisco);
   coordenadas.push(corrdenadasIglesiaEscuelaCristo);
   coordenadas.push(corrdenadasIglesiaCalvario);
+ 
+  
   infowindow = new google.maps.InfoWindow();
   
   var mapOptions = {
@@ -55,12 +67,27 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaMerced, 'click', function() {
    if(ttour==0){
-    pone_info_emergent(marcadorIglesiaMerced,r_info[0]);
+    pone_info_emergent(marcadorIglesiaMerced,r_info[2]);
     mostrarSitio('IMerced');
    }
   });
   markers.push(marcadorIglesiaMerced);
  marcadorIglesiaMerced.setIcon('img/iconos/cty1.png');
+ 
+ /*********************iglesia san felipe***********************/
+  var marcadorIglesiaSanFelipe = new google.maps.Marker({
+      position: coordenadasIglesiaSanFelipe,
+      map: map,
+      title: 'Iglesia de San Felipe'
+  });
+  google.maps.event.addListener(marcadorIglesiaSanFelipe, 'click', function() {
+   if(ttour==0){
+    pone_info_emergent(marcadorIglesiaSanFelipe,r_info[1]);
+    mostrarSitio('ISanFelipe');
+   }
+  });
+  markers.push(marcadorIglesiaSanFelipe);
+ marcadorIglesiaSanFelipe.setIcon('img/iconos/cty1.png');
  
  
  /******************************Catedral de San Jose**********************/
@@ -71,14 +98,28 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaSanJose, 'click', function() {
        if(ttour==0){
-   pone_info_emergent(marcadorIglesiaSanJose,r_info[1]);
+   pone_info_emergent(marcadorIglesiaSanJose,r_info[3]);
     mostrarSitio('ISanJose');
        }
   });
   markers.push(marcadorIglesiaSanJose);
   marcadorIglesiaSanJose.setIcon('img/iconos/cty1.png');
   
-  
+   /*********************iglesia San Pedro Apostol***********************/
+  var marcadorIglesiaSanPedroApostol = new google.maps.Marker({
+      position: coordenadasSanPedroApostol,
+      map: map,
+      title: 'Iglesia de San Pedro Apóstol'
+  });
+  google.maps.event.addListener(marcadorIglesiaSanPedroApostol, 'click', function() {
+   if(ttour==0){
+    pone_info_emergent(marcadorIglesiaSanPedroApostol,r_info[4]);
+    mostrarSitio('ISanPedro');
+   }
+  });
+  markers.push(marcadorIglesiaSanPedroApostol);
+ marcadorIglesiaSanPedroApostol.setIcon('img/iconos/cty1.png');
+ 
   /*****************Catedral de San Francisco**********************/
 
   var marcadorIglesiaSanFrancisco = new google.maps.Marker({
@@ -88,7 +129,7 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaSanFrancisco, 'click', function() {
     if(ttour==0){
-     pone_info_emergent(marcadorIglesiaSanFrancisco,r_info[2]);
+     pone_info_emergent(marcadorIglesiaSanFrancisco,r_info[5]);
     mostrarSitio('ISanFrancisco');
     }
   });
@@ -105,7 +146,7 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaEscuelaCristo, 'click', function() {
       if(ttour==0){
-     pone_info_emergent(marcadorIglesiaEscuelaCristo,r_info[3]);
+     pone_info_emergent(marcadorIglesiaEscuelaCristo,r_info[6]);
      mostrarSitio('IEscuelaCristo');
       }
   });
@@ -121,12 +162,30 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaCalvario, 'click', function() {
       if(ttour==0){
-      pone_info_emergent(marcadorIglesiaCalvario,r_info[4]);
+      pone_info_emergent(marcadorIglesiaCalvario,r_info[7]);
     mostrarSitio('ICalvario');
       }
   });
   markers.push(marcadorIglesiaCalvario);
   marcadorIglesiaCalvario.setIcon('img/iconos/cty1.png')
+ 
+ 
+ /**********************************Parroquia Nuetra Señora de la Asuncion******************************/
+  var marcadorParroquiaAsuncion = new google.maps.Marker({
+      position: coordenadasParroquiaAsuncion,
+      map: map,
+      title: 'Parroquia de Nuestra Señora de la Asuncion'
+  });
+  google.maps.event.addListener(marcadorParroquiaAsuncion, 'click', function() {
+      if(ttour==0){
+      pone_info_emergent(marcadorParroquiaAsuncion,r_info[0]);
+    mostrarSitio('IAsuncion');
+      }
+  });
+  markers.push(marcadorIglesiaCalvario);
+  marcadorParroquiaAsuncion.setIcon('img/iconos/cty1.png')
+ 
+
  
   
   crea_poligono();
@@ -158,7 +217,7 @@ function crea_poligono(){
         path: rutas
         , map: map
         , strokeColor: '#ff0000'
-        , strokeWeight: 3
+        , strokeWeight: 5
         , strokeOpacity: 0.4
         , clickable: false
     });
