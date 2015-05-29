@@ -13,29 +13,9 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <script type="text/javascript" src="js/acciones_ciudades.js"></script> 
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-            .ttiempo{
-                color:white;
-            }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
-
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-        <style>
-      html { height: 100% }
-      body { height: 100%; background-color:#CCC }
-      #map-outer { padding: 20px; border: 2px solid #CCC; margin-bottom: 40px; }
-	  #map-container { height: 400px }
-          
-	  @media all and (max-width: 911px) {
-		#map-outer  { height: 40% }
-		}
-    </style>
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		 <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <link rel="stylesheet" href="css/pagina_inicio.css">
     
     <!-- SCRIPT PARA VER QUE ELIGIO Y EN QUE IDIOMA-->   
     </head>
@@ -43,6 +23,7 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+ 
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -83,21 +64,103 @@
       </div>
     </div>
 
-  <div class="container">      
+  <div class="container">
+      <div id="myCarousel" class="carousel slide">
+      <!--ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+		<li data-target="#myCarousel" data-slide-to="6"></li>
+		<li data-target="#myCarousel" data-slide-to="7"></li>
+      </ol-->
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+	  
+        <div class="active item">
+		<div class="row-fluid" id="krcel" >
+		<img  src="img/ISanPedro/1.jpg"  id="img1" class="img-rounded" alt="banner1" />
+        <img  src="img/ISanPedro/2.jpg"  id="img2" class="img-rounded" alt="banner1" />
+        <img  src="img/ISanPedro/3.jpg"  id="img3" class="img-rounded" alt="banner1" />
+		
+        </div>
+        </div>
+		
+		<div class="item">
+		<div class="row-fluid" id="krcel">
+		<img  src="img/ISanJose/1.jpg"  id="img1" class="img-rounded" alt="banner2" />
+        <img  src="img/ISanJose/4.jpg" id="img2" class="img-rounded" alt="banner2" />
+		<img  src="img/ISanJose/5.jpg" id="img3" class="img-rounded" alt="banner2" />
+	
+        </div>
+		</div>
+		
+        <div class="item">
+		<div class="row-fluid" id="krcel" >
+		<img  src="img/ISanFrancisco/1.jpg"  id="img1" class="img-rounded" alt="banner3" />
+        <img  src="img/ISanFrancisco/4.jpg"  id="img2" class="img-rounded" alt="banner3" />
+		<img  src="img/ISanFrancisco/3.jpg"  id="img3" class="img-rounded" alt="banner3" />
+	
+        </div>
+		</div>
+		
+		<div class="item">
+		<div class="row-fluid" id="krcel" >
+		<img  src="img/IMerced/1.jpg"  id="img1" class="img-rounded" alt="banner4" />
+        <img  src="img/IMerced/2.jpg"  id="img2" class="img-rounded" alt="banner4" />
+		<img  src="img/IMerced/3.jpg"  id="img3" class="img-rounded" alt="banner4" />
+	
+        </div>
+		</div>
+
+		 
+        <div class="item">
+		<div class="row-fluid" id="krcel">
+		<img  src="img/IAsuncion/3.jpg"  id="img1" class="img-rounded" alt="banner5" />
+        <img  src="img/IAsuncion/5.jpg"  id="img2" class="img-rounded" alt="banner5" />
+        <img  src="img/IAsuncion/4.jpg"  id="img3" class="img-rounded" alt="banner5" />
+		
+        </div>
+        </div>
+		
+        <div class="item" >
+		<div class="row-fluid" id="krcel">
+		<img  src="img/ICalvario/1.jpg"  id="img1" class="img-rounded" alt="banner6" />
+        <img  src="img/ICalvario/2.jpg"  id="img2" class="img-rounded" alt="banner6" />
+		<img  src="img/ICalvario/6.jpg"  id="img3" class="img-rounded" alt="banner6" />
+        
+        </div>
+		</div>
+		
+        <div class="item">
+		<div class="row-fluid" id="krcel">
+		<img  src="img/IEscuelaCristo/1.jpg"  id="img1" class="img-rounded" alt="banner7" />
+        <img  src="img/IEscuelaCristo/2.jpg"  id="img2" class="img-rounded" alt="banner7" />
+        <img  src="img/IEscuelaCristo/3.jpg"  id="img3" class="img-rounded" alt="banner7" />
+        </div>
+		</div>
+		
+      </div>
+      <!-- Carousel nav -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+      
+      
    <footer>
         <p>&copy; Company 2015</p>
       </footer>
-    </div>
       
+    </div>
     
-
-   
+    
+        
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+        <Script src="js/vendor/bootstrap.min.js"></script>
 
-        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
