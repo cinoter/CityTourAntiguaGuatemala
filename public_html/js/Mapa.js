@@ -12,8 +12,10 @@ var infoWin=[];
 var index =0;
  var cronometro;
 var sitio = "address";
-var r_lugar=['IAsuncion','ISanFelipe','IMerced','ISanJose','ISanPedro','ISanFrancisco','IEscuelaCristo','ICalvario'];
-var r_info=["<h4>Parroquia de Nuestra Señora de la Asunción</h4>","<h4>Santuario del Apóstol San Felipe</h4>","<h4>Iglesia de la Merced</h4>","<h4>Catedran de San Jose</h4>","<h4>Iglesia San Pedro Apóstol</h4>",
+var r_lugar=['IAsuncion','ISanFelipe','IMerced','Arco','Mercado','ISanJose','ISanPedro','ISanFrancisco','IEscuelaCristo','ICalvario'];
+var r_info=["<h4>Parroquia de Nuestra Señora de la Asunción</h4>","<h4>Santuario del Apóstol San Felipe</h4>",
+    "<h4>Iglesia de la Merced</h4>","<h4>Arco de Santa Catalina</h4>","<h4>Mercado de Artesanías</h4>","<h4>Catedral de San Jose</h4>",
+    "<h4>Iglesia San Pedro Apóstol</h4>",
     "<h4>Templo de San Francisco</h4> Santuario del Santo Hermano Pedro","<h4>Templo de la Escuela de Cristo</h4>",
     "<h4>Iglesia Ermita del Santo Calvario</h4>"];
 var coordenadas=[];  
@@ -27,7 +29,7 @@ var poligono;
 
 function initialize() {
   var myLatlng = new google.maps.LatLng(14.5617991, -90.728000);
-  var coordenadasArco = new google.maps.LatLng(14.559666, -90.734259);
+  var coordenadasArco = new google.maps.LatLng(14.559594, -90.734163);
   var coordenadasIglesiaMerced = new google.maps.LatLng(14.561210, -90.734190);
   var coordenadasIglesiaSanJose=new google.maps.LatLng(14.556714, -90.732711);
   var corrdenadasIglesiaSanFrancisco=new google.maps.LatLng(14.553993, -90.729441);
@@ -37,17 +39,21 @@ function initialize() {
   var coordenadasParroquiaAsuncion=new google.maps.LatLng(14.574711, -90.740990); 
   var coordenadasIglesiaSanFelipe=new google.maps.LatLng(14.573117, -90.734641);
   
+  var coordenadasMercado=new google.maps.LatLng(14.557168, -90.739544);
+  
   
   coordenadas.push(coordenadasParroquiaAsuncion);
   coordenadas.push(coordenadasIglesiaSanFelipe);
   coordenadas.push(coordenadasIglesiaMerced);
+  coordenadas.push(coordenadasArco);
+  coordenadas.push(coordenadasMercado); 
   coordenadas.push(coordenadasIglesiaSanJose);
   coordenadas.push(coordenadasSanPedroApostol);//cambie de orden para que el tour sea lo mas cercano
   coordenadas.push(corrdenadasIglesiaSanFrancisco);
   coordenadas.push(corrdenadasIglesiaEscuelaCristo);
   coordenadas.push(corrdenadasIglesiaCalvario);
- 
-  
+
+
   infowindow = new google.maps.InfoWindow();
   
   var mapOptions = {
@@ -59,21 +65,22 @@ function initialize() {
      //arco de santa catalina
 
 
-/*********************iglesia merced***********************/
-  var marcadorIglesiaMerced = new google.maps.Marker({
-      position: coordenadasIglesiaMerced,
-      map: map,
-      title: 'Iglesia de la Merced'
-  });
-  google.maps.event.addListener(marcadorIglesiaMerced, 'click', function() {
-   if(ttour==0){
-    pone_info_emergent(marcadorIglesiaMerced,r_info[2]);
-    mostrarSitio('IMerced');
-   }
-  });
-  markers.push(marcadorIglesiaMerced);
- marcadorIglesiaMerced.setIcon('img/iconos/cty1.png');
  
+ /**********************************Parroquia Nuetra Señora de la Asuncion******************************/
+  var marcadorParroquiaAsuncion = new google.maps.Marker({
+      position: coordenadasParroquiaAsuncion,
+      map: map,
+      title: 'Parroquia de Nuestra Señora de la Asuncion'
+  });
+  google.maps.event.addListener(marcadorParroquiaAsuncion, 'click', function() {
+      if(ttour==0){
+      pone_info_emergent(marcadorParroquiaAsuncion,r_info[0]);
+    mostrarSitio('IAsuncion');
+      }
+  });
+  markers.push(marcadorIglesiaCalvario);
+  marcadorParroquiaAsuncion.setIcon('img/iconos/cty1.png')
+
  /*********************iglesia san felipe***********************/
   var marcadorIglesiaSanFelipe = new google.maps.Marker({
       position: coordenadasIglesiaSanFelipe,
@@ -90,6 +97,52 @@ function initialize() {
  marcadorIglesiaSanFelipe.setIcon('img/iconos/cty1.png');
  
  
+/*********************iglesia merced***********************/
+  var marcadorIglesiaMerced = new google.maps.Marker({
+      position: coordenadasIglesiaMerced,
+      map: map,
+      title: 'Iglesia de la Merced'
+  });
+  google.maps.event.addListener(marcadorIglesiaMerced, 'click', function() {
+   if(ttour==0){
+    pone_info_emergent(marcadorIglesiaMerced,r_info[2]);
+    mostrarSitio('IMerced');
+   }
+  });
+  markers.push(marcadorIglesiaMerced);
+ marcadorIglesiaMerced.setIcon('img/iconos/cty1.png');
+ 
+  /*********************Arco santa catalina***********************/
+  var marcadorArco = new google.maps.Marker({
+      position: coordenadasArco,
+      map: map,
+      title: 'Arco de Santa Catalina'
+  });
+  google.maps.event.addListener(marcadorArco, 'click', function() {
+   if(ttour==0){
+    pone_info_emergent(marcadorArco,r_info[3]);
+    mostrarSitio('Arco');
+   }
+  });
+  markers.push(marcadorArco);
+ marcadorArco.setIcon('img/iconos/cty1.png');
+ 
+  /******************Mercado***********************/
+  var marcadorMercado = new google.maps.Marker({
+      position: coordenadasMercado,
+      map: map,
+      title: 'Mercado de Artesanías'
+  });
+  google.maps.event.addListener(marcadorMercado, 'click', function() {
+   if(ttour==0){
+    pone_info_emergent(marcadorMercado,r_info[4]);
+    mostrarSitio('Mercado');
+   }
+  });
+  markers.push(marcadorMercado);
+ marcadorMercado.setIcon('img/iconos/cty1.png');
+ 
+ 
  /******************************Catedral de San Jose**********************/
   var marcadorIglesiaSanJose = new google.maps.Marker({
       position: coordenadasIglesiaSanJose,
@@ -98,12 +151,14 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaSanJose, 'click', function() {
        if(ttour==0){
-   pone_info_emergent(marcadorIglesiaSanJose,r_info[3]);
+   pone_info_emergent(marcadorIglesiaSanJose,r_info[5]);
     mostrarSitio('ISanJose');
        }
   });
   markers.push(marcadorIglesiaSanJose);
   marcadorIglesiaSanJose.setIcon('img/iconos/cty1.png');
+  
+
   
    /*********************iglesia San Pedro Apostol***********************/
   var marcadorIglesiaSanPedroApostol = new google.maps.Marker({
@@ -113,7 +168,7 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaSanPedroApostol, 'click', function() {
    if(ttour==0){
-    pone_info_emergent(marcadorIglesiaSanPedroApostol,r_info[4]);
+    pone_info_emergent(marcadorIglesiaSanPedroApostol,r_info[6]);
     mostrarSitio('ISanPedro');
    }
   });
@@ -129,7 +184,7 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaSanFrancisco, 'click', function() {
     if(ttour==0){
-     pone_info_emergent(marcadorIglesiaSanFrancisco,r_info[5]);
+     pone_info_emergent(marcadorIglesiaSanFrancisco,r_info[7]);
     mostrarSitio('ISanFrancisco');
     }
   });
@@ -146,7 +201,7 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaEscuelaCristo, 'click', function() {
       if(ttour==0){
-     pone_info_emergent(marcadorIglesiaEscuelaCristo,r_info[6]);
+     pone_info_emergent(marcadorIglesiaEscuelaCristo,r_info[8]);
      mostrarSitio('IEscuelaCristo');
       }
   });
@@ -162,28 +217,14 @@ function initialize() {
   });
   google.maps.event.addListener(marcadorIglesiaCalvario, 'click', function() {
       if(ttour==0){
-      pone_info_emergent(marcadorIglesiaCalvario,r_info[7]);
+      pone_info_emergent(marcadorIglesiaCalvario,r_info[9]);
     mostrarSitio('ICalvario');
       }
   });
   markers.push(marcadorIglesiaCalvario);
   marcadorIglesiaCalvario.setIcon('img/iconos/cty1.png')
  
- 
- /**********************************Parroquia Nuetra Señora de la Asuncion******************************/
-  var marcadorParroquiaAsuncion = new google.maps.Marker({
-      position: coordenadasParroquiaAsuncion,
-      map: map,
-      title: 'Parroquia de Nuestra Señora de la Asuncion'
-  });
-  google.maps.event.addListener(marcadorParroquiaAsuncion, 'click', function() {
-      if(ttour==0){
-      pone_info_emergent(marcadorParroquiaAsuncion,r_info[0]);
-    mostrarSitio('IAsuncion');
-      }
-  });
-  markers.push(marcadorIglesiaCalvario);
-  marcadorParroquiaAsuncion.setIcon('img/iconos/cty1.png')
+
  
 
  
