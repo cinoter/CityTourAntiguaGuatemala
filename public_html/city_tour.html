@@ -26,7 +26,7 @@ and open the template in the editor.
         <style>
       html { height: 100% }
       body { height: 100%; background-color:#CCC }
-      #map-outer { padding: 20px; border: 2px solid #CCC; margin-bottom: 40px; }
+      #map-outer { padding: 20px;  margin-bottom: 40px; }
 	  #map-container { height: 400px }
 	  @media all and (max-width: 911px) {
 		#map-outer  { height: 40% }
@@ -42,7 +42,7 @@ and open the template in the editor.
 
  
     </head>
-    <body onload="carga()">
+    <body onload="carga()" >
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -83,16 +83,16 @@ and open the template in the editor.
        
     
     
-  <div class="container">
+  <div class="container ">
   <div class="row">
-      <div id="map-outer" class="col-md-12">
-          <div id="map-container" class="col-md-8"></div>
+      <div id="map-outer" class="col-md-12 alert alert-warning">
+          <div id="map-container" class="col-md-8 alert alert-warning"></div>
           <div id="address" class="col-md-4" >
            
             
           </div>
           <!-- ============================ IGLESIA DE LA MERCED ===================================== -->
-          <div id="IMerced" class="col-md-4" style='display:none;'>
+          <div id="IMerced" class="col-md-4 alert alert-success" style='display:none;'>
               <h2 class="text-center">Iglesia de la Merced</h2>
               <h4 class="text-center">6a. Avenida Norte y 1a. Calle Poniente, final de la Calle del Arco</h4>
               <p class="text-justify">Algunos frailes de la Orden de Nuestra Señora de la Merced llegaron 
@@ -107,19 +107,19 @@ and open the template in the editor.
                               
           </div>
            <!-- ============================ PARROQUIA DE SAN JOSE ===================================== -->
-          <div id="ISanJose" class="col-md-4" style='display:none;'>
+          <div id="ISanJose" class="col-md-4 alert alert-success" style='display:none;'>
               <h2 class="text-center">Parroquia de San José (Catedral)</h2>
                <h4 class="text-center">4a. Avenida Norte y 5a. Calle Oriente, Frente a la Plaza Mayor (Parque Central)</h4>
                <p class="text-justify"> La construcción de la primera Catedral se inició en 1545. Esa edificación fue demolida en 1668. En 1669, se dio
                    inicio a la construcción de la nueva Catedral, la que fue inaugurada en 1680.</p>
                
-               <p class="text-justify">La fachada principal tiene tres puertas, la central con su tímpano rehundido; también,
+               <p class="text-justify ">La fachada principal tiene tres puertas, la central con su tímpano rehundido; también,
                    tiene un ataurique (decoración vegetal, o sea en forma de ramas y hojas), que constituye una muestra especial
                    de la artesanía de la época. El templo fue construido con cinco secciones (naves), entre las que se incluyen 
                    la central y dos procesionales; complementándose con 18 capillas laterales, todas cubiertas con domos.</p>
           </div>
           <!-- ============================ IGLESIA DE SAN FRANCISCO ===================================== -->
-            <div id="ISanFrancisco" class="col-md-4" style='display:none;'>
+            <div id="ISanFrancisco" class="col-md-4 alert alert-success" style='display:none;'>
               <h2 class="text-center">Temlo de San Francisco</h2>
               <h4 class="text-center">Santuario del Santo Hermano Pedro</h4>
               <h4 class="text-center">7a. Calle Oriente y Calle de los Pasos</h4>
@@ -131,7 +131,7 @@ and open the template in the editor.
                   de sepultura común de los religiosos de la Tercera Orden Franciscana, en el Templo de San Francisco El Grande.</p>
           </div>
           <!-- ============================ Templo de la Escuela de Cristo ===================================== -->
-          <div id="IEscuelaCristo" class="col-md-4" style='display:none;'>
+          <div id="IEscuelaCristo" class="col-md-4 alert alert-success" style='display:none;'>
               <h2 class="text-center">Templo de la Escuela de Cristo</h2>
               <h4 class="text-center">Calle de los Pasos y 9a. Calle "A" Oriente</h4>
               <p class="text-justify">En 1664, un grupo de frailes fundó la Escuela de
@@ -146,7 +146,7 @@ and open the template in the editor.
                   que de los pueblos aledaños la gente concurría continuamente.</p>
           </div>
            <!-- ============================ Iglesia El Calvario ===================================== -->
-          <div id="ICalvario"  class="col-md-4" style='display:none;'>
+          <div id="ICalvario"  class="col-md-4 alert alert-success" style='display:none;'>
               <h2 class="text-center"><br/>Iglesia el Calvario</h2>
               <h4 class="text-center"><br/>Final de Alameda del Calvario</h4>
               <p class="text-justify"><br/><br/>En 1618, la Hermandad de la Tercera Orden de Penitencia de San Francisco 
@@ -156,7 +156,7 @@ and open the template in the editor.
           </div>
           
            <!-- ============================ IGLESIA SAN PEDRO APOSTOL ===================================== -->
-          <div id="ISanPedro" class="col-md-4" style='display:none;'>
+          <div id="ISanPedro" class="col-md-4 alert alert-success" style='display:none;'>
               <h2 class="text-center">Iglesia de San Pedro Apóstol</h2>
               <h4 class="text-center">3a. Avenida Sur y 6a. Calle Oriente</h4>
               <p class="text-justify">Originalmente, en esta edificación se encontraba el antiguo Hospital para 
@@ -172,7 +172,7 @@ and open the template in the editor.
           </div>
            
             <!-- ============================ IGLESIA ASUNCION ===================================== -->
-          <div id="IAsuncion" class="col-md-4" style='display:none;'>
+          <div id="IAsuncion" class="col-md-4 alert alert-success" style='display:none;'>
               <h2 class="text-center">Parroquia de Nuestra Señora de la Asunción</h2>
               <h4 class="text-center">Plazuela de Jocotenango, Sacatepéquez</h4>
               </br>
@@ -191,7 +191,7 @@ and open the template in the editor.
            
             
                         <!-- ============================ IGLESIA SAN FELIPE ===================================== -->
-          <div id="ISanFelipe" class="col-md-4" style='display:none;'>
+          <div id="ISanFelipe" class="col-md-4 alert alert-success" style='display:none;'>
               <h2 class="text-center">Santuario del Apóstol San Felipe</h2>
               <h4 class="text-center">Aldea San Felipe de Jesús, Sacatepéquez</h4>
               </br>
@@ -210,7 +210,7 @@ and open the template in the editor.
           </div>
                         
             <!-- ============================ MERCADO ARTESANIAS ===================================== -->
-          <div id="Mercado" class="col-md-4" style='display:none;'>
+          <div id="Mercado" class="col-md-4 alert alert-success" style='display:none;'>
               <h2 class="text-center">Mercado de Artesanías</h2>
               
               </br>
@@ -233,7 +233,7 @@ and open the template in the editor.
                               
           </div>
          <!-- ============================ ARCO DE SANTA CATALINA ===================================== -->
-          <div id="Arco" class="col-md-4" style='display:none;'>
+          <div id="Arco" class="col-md-4 alert alert-success" style='display:none;'>
               <h2 class="text-center">Arco de Santa Catalina</h2>
               <h4 class="text-center">5a Avenida Norte, entre 1a y 2da Calle Poniente</h4>
               </br>
@@ -260,48 +260,48 @@ and open the template in the editor.
 
 
 
-    <div class="container">
+    <div class="container ">
         <div class="row">
           
-        <div id="address2" class="col-md-12" >
+        <div id="address2" class="col-md-12  " >
         
         </div>
              <!-- ============================ IGLESIA DE LA MERCED2 ===================================== -->
-           <div id="IMerced2" class="col-md-12" style='display:none;'>
+           <div id="IMerced2" class="col-md-12 alert alert-warning" style='display:none;'>
                
                <div class="col-md-4">
                    <img src="img/IMerced/1.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                     <footer>
-                        <p class="text-center">Exterior de la Iglesia de la Merced</p>
+                        <p class="text-center text-danger">Exterior de la Iglesia de la Merced</p>
                      </footer>
                </div>
                 <div class="col-md-4">
                    <img src="img/IMerced/2.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                    <footer>
-                        <p class="text-center">Interior de la Iglesia de la Merced</p>
+                        <p class="text-center text-danger">Interior de la Iglesia de la Merced</p>
                      </footer>
                </div>
                <div class="col-md-4">
                    <img src="img/IMerced/3.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                    <footer>
-                        <p class="text-center">Altar del Santisimo</p>
+                        <p class="text-center text-danger">Altar del Santisimo</p>
                      </footer>
                </div>
                
                
              
-                 <p class="text-justify">La fachada de la Iglesia tiene dos campanarios bajos, ocho grandes columnas salomónicas 
+                 <p class="text-justify"></br></br>La fachada de la Iglesia tiene dos campanarios bajos, ocho grandes columnas salomónicas 
                    con diseños ornamentales tallados en estuco y el escudo de esa Orden religiosa.  En las hornacinas, 
                    se observan las imágenes de santos mercedarios; de San Pedro Nolasco, fundador de la Orden; y de 
                    Nuestra Señora de la Merced. En 1687, el Ayuntamiento de la ciudad les otorgó un terreno en una calle que 
                    colindaba con la parte de atrás de la iglesia. En la actualidad, esa área es el final de la Calle del Arco. 
-                  Como consecuencia del terremoto ocurrido en 1773, esta Iglesia y Convento sufrieron daños considerables.</p>
+                   Como consecuencia del terremoto ocurrido en 1773, esta Iglesia y Convento sufrieron daños considerables.</br></br></br></p>
                 <div class="col-md-6">
                     <p>En la actualidad, la Iglesia se encuentra reconstruida y es muy visitada por los feligreses para venerar a 
                         la imagen de Nuestra Señora de la Merced, patrona de la ciudad, y a la imagen de Jesús Nazareno.</p>
                    <img src="img/IMerced/4.jpg"  class="img-responsive img-circle center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                    <footer>
-                        <p class="text-center">Imagen de Nuestra Señora de la Merced</p>
+                        <p class="text-center text-danger">Imagen de Nuestra Señora de la Merced</p>
                      </footer>
                </div>
                  <div class="col-md-6">
@@ -309,171 +309,172 @@ and open the template in the editor.
                         Jesús Nazareno de la Merced como Protector e Intercesor de los Antigüeños.</p>
                    <img src="img/IMerced/5.jpg"  class="img-responsive img-circle center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                    <footer>
-                        <p class="text-center">Imagen de Jesús Nazareno de la Merced</p>
+                        <p class="text-center text-danger">Imagen de Jesús Nazareno de la Merced</p>
                      </footer>
                </div>
                   <div class="col-md-12">
-                 <p class="text-justify">Cada año, en Semana Santa, se prepara un huerto y una alfombra de aserrín de colores frente a la capilla de Jesús de Nazareno</p>
+                 <p class="text-center"></br></br>Cada año, en Semana Santa, se prepara un huerto y una alfombra 
+                     de aserrín de colores frente a la capilla de Jesús de Nazareno</br></p>
                   </div>
                  <div class="col-md-6">
                    
                    <img src="img/IMerced/6.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                    <footer>
-                        <p class="text-center">Huertos y Alfombras de Acerrin</p>
+                        <p class="text-center text-danger">Huertos y Alfombras de Acerrin</p>
                      </footer>
                </div>
                 <div class="col-md-6">
                    
                    <img src="img/IMerced/7.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                    <footer>
-                        <p class="text-center">Huertos y Alfombras de Acerrin</p>
+                        <p class="text-center text-danger">Huertos y Alfombras de Acerrin</p>
                      </footer>
                </div> 
                  <div class="col-md-12">
-                 <p>Actualmente, el Convento de la Merced se encuentra en ruinas. En el interior del claustro principal de ese 
+                 <p class="text-justify "></br></br>Actualmente, el Convento de la Merced se encuentra en ruinas. En el interior del claustro principal de ese 
                      Convento se encuentra una fuente, con diseño octagonal, que es considerada como la de mayor tamaño en Hispanoamérica.</p>
                  </div>
         </div>
         
            <!-- ============================ PARROQUIA DE SAN JOSE ===================================== -->
-           <div id="ISanJose2" class="col-md-12" style='display:none;'>
+           <div id="ISanJose2" class="col-md-12 alert alert-warning" style='display:none;'>
                  <div class="col-md-6">
                    <img src="img/ISanJose/1.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                     <footer>
-                        <p class="text-center">Exterior de la Parroquia</p>
+                        <p class="text-center text-danger">Exterior de la Parroquia</p>
                      </footer>
                </div>
                 <div class="col-md-6">
                    <img src="img/ISanJose/7.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                     <footer>
-                        <p class="text-center">Exterior Iluminado de la Parroquia</p>
+                        <p class="text-center text-danger">Exterior Iluminado de la Parroquia</p>
                      </footer>
                </div>
                <div class="col-md-12">
-                   <p class="text-justify">En esa fachada se pueden apreciar esculturas representando a los 
+                   <p class="text-justify"></br></br>En esa fachada se pueden apreciar esculturas representando a los 
                        doce apóstoles y cuatro padres de la iglesia. En la hornacina central, se observan dos esculturas 
-                       que representan las imágenes de: </p>
+                       que representan las imágenes de: </br></br></p>
                </div>
                 <div class="col-md-6">
-                   <img src="img/ISanJose/2.jpg"  class="img-responsive img-circle center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
+                   <img src="img/ISanJose/2.jpg"  class="img-responsive img-circle img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                     <footer>
-                        <p class="text-center">Padre Eterno</p>
+                        <p class="text-center text-danger">Padre Eterno</p>
                      </footer>
                </div>
                 <div class="col-md-6">
-                   <img src="img/ISanJose/3.jpg"  class="img-responsive img-circle center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
+                   <img src="img/ISanJose/3.jpg"  class="img-responsive img-circle img-circle center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                     <footer>
-                        <p class="text-center">Virgen de la Asunción</p>
+                        <p class="text-center text-danger">Virgen de la Asunción</p>
                      </footer>
                </div>
                <div class="col-md-12">
-                   <p class="text-justify">La Catedral fue uno de los templos de mayor importancia en Hispanoamérica en el tiempo colonia.
+                   <p class="text-justify"></br></br>La Catedral fue uno de los templos de mayor importancia en Hispanoamérica en el tiempo colonia.
                    En los capiteles de los pilares y en las cornisas del edificio se pueden apreciar finas decoraciones con   estuco; 
                    sobresaliendo los escudos ubicados en los domos y en las ventanas. Al norte de Catedral está el Palacio Arzobispal, construido 
                    entre 1706 y 1711, el cual sólo conserva la puerta de ingreso y los marcos de piedra de las puertas de la fachada oeste, 
-                   con sus escudos de armas. Originalmente, la edificación tenía dos niveles y una galera que daba sobre la plaza. </p>
+                   con sus escudos de armas. Originalmente, la edificación tenía dos niveles y una galera que daba sobre la plaza. </br></br></p>
                    
                    <p class="text-justify"> De la Iglesia Catedral, el jueves de la Octava de la festividad del Hábeas Christi, salía una 
                        solemne procesión del Santísimo Sacramento que hacía su recorrido por calles de la ciudad. En ese día, adornada a todo 
                        esmero, y concurrida con numerosas personas, la procesión era acompañada por el Hermano Pedro, quien hacía de su capa una 
                        bandera que levantaba en un astil de madera. Delante de la custodia iba agitando incesantemente esa bandera por todo el tiempo 
                        que duraba la procesión, acompañando el compás de sus brazos y el movimiento de sus pies con alegres saltos. Al mismo tiempo, 
-                       iba cantando algunas coplas que él mismo había compuesto al misterio.</p>
+                       iba cantando algunas coplas que él mismo había compuesto al misterio.</br></br></p>
                    
                    <p class="text-justify"> El origen de esa celebración se remonta hacia el Siglo XIII, y se trata de una festividad religiosa que 
                        nace como prolongación del Jueves Santo. En la localidad de Bolsena, Italia, se produjo un milagro cuando un sacerdote que 
-                       celebraba la misa dudó que la Consagración fuera algo real. Al momento de partir la Hostia vio salir sangre de ella.</p>
+                       celebraba la misa dudó que la Consagración fuera algo real. Al momento de partir la Hostia vio salir sangre de ella.</br></br></p>
                    
                    <p class="text-justify">El Papa Urbano IV, conmovido por el prodigio y a petición de varios Obispos, fijó la festividad de la 
                        Solemnidad del Santísimo Cuerpo de Jesucristo, para toda la Iglesia, el jueves después de la Octava de Pentecostés. Actualmente,
-                       esta celebración religiosa es conocida como el Corpus Christi.</p>
+                       esta celebración religiosa es conocida como el Corpus Christi.</br></br></p>
                    <p class="text-justify">La Iglesia Catedral sufrió daños considerables por el terremoto ocurrido en 1773. En virtud de ello, las 
                        imágenes religiosas del recinto fueron resguardadas en la Iglesia de San José que había tenido menos daños como consecuencia 
                        de esa devastación telúrica. Al concluirse la restauración parcial de la Iglesia Catedral, aquellas imágenes religiosas que habían 
                        sido trasladadas regresaron a su anterior morada. En reconocimiento y agradecimiento a la divinidad, esta última empezó a nombrarse 
                        Parroquia de San José Catedral; mientras que las ruinas de la original Iglesia de San José son conocidas actualmente como ruinas de 
-                       la Iglesia de San José El Viejo. La Parroquia de San José Catedral es muy visitada por los fieles devotos.</p>
+                       la Iglesia de San José El Viejo. La Parroquia de San José Catedral es muy visitada por los fieles devotos.</br></br></p>
                </div>
                  <div class="col-md-4">
                    <img src="img/ISanJose/4.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                     <footer>
-                        <p class="text-center">Altar Mayor de Catedral</p>
+                        <p class="text-center text-danger">Altar Mayor de Catedral</p>
                      </footer>
                </div>
                <div class="col-md-4">
                    <img src="img/ISanJose/5.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                     <footer>
-                        <p class="text-center"> Capilla del Señor Sepultado de San José Catedral</p>
+                        <p class="text-center text-danger"> Capilla del Señor Sepultado de San José Catedral</p>
                      </footer>
                </div>
                <div class="col-md-4">
                    <img src="img/ISanJose/6.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                     <footer>
-                        <p class="text-center">Imagen del Señor Sepultado de San José Catedral</p>
+                        <p class="text-center text-danger">Imagen del Señor Sepultado de San José Catedral</p>
                      </footer>
                </div>
                
            </div>    
         <!-- ============================ TEMPLO DE SAN FRANCISCO ===================================== -->
-        <div id="ISanFrancisco2" class="col-md-12" style='display:none;'>
+        <div id="ISanFrancisco2" class="col-md-12 alert alert-warning" style='display:none;'>
             <div class="col-md-12">
             <p class="text-justify">Luego de la muerte del Hermano Pedro, el señor Obispo decidió que el cuerpo
                 se velara en la Iglesia del Oratorio de la Escuela de Cristo, la noche del 25 de abril de 1667, 
                 antes del solemne funeral y entierro en la bóveda de sepultura común de los religiosos de la Tercera 
                 Orden Franciscana, en el Templo de San Francisco El Grande. Con motivo de los trabajos de reconstrucción 
                 y reparación del mismo Templo, los restos mortales del Hermano Pedro se trasladaron a diferentes capillas 
-                en los años 1686, 1692 y 1817.</p>
+                en los años 1686, 1692 y 1817.</br></br></p>
             
             <p class="text-justify">El Templo y el Convento sufrieron daños considerables por el terremoto ocurrido en 1773. La 
                 fachada del Templo está flanqueada de dos torres más bajas que la cúspide. La torre del norte es de las campanas, 
                 y la del sur era del reloj, pero fue derribada por el terremoto de 1773. En la actualidad, el Templo se encuentra 
-                parcialmente reconstruido y es el lugar que más visitan los fieles devotos. El Convento se encuentra en ruinas.</p>
+                parcialmente reconstruido y es el lugar que más visitan los fieles devotos. El Convento se encuentra en ruinas.</br></br></p>
             
             <p class="text-justify">La reconstrucción del Templo de San Francisco El Grande se realizó de 1932 a 1970. Durante ese 
                 tiempo, la imagen de Jesús Nazareno del Perdón permaneció en la Capilla de la Tercera Orden en el Templo Nuestra 
                 Señora de los Remedios. El acceso al amplio atrio de este Templo puede hacerse por el Portal de San Buenaventura,
-                al norte; o por el Portal de San Francisco, al poniente.</p>
+                al norte; o por el Portal de San Francisco, al poniente.</br></br></p>
             </div>
             <div class="col-md-6">
                    <img src="img/ISanFrancisco/1.jpg"  class="img-responsive img-thumbnail center-block" alt="Iglesia de la Merced" title="Iglesia de la Merced">
                     <footer>
-                        <p class="text-center">Templo de San Francisco</p>
+                        <p class="text-center text-danger">Templo de San Francisco</p>
                      </footer>
             </div>
             <div class="col-md-6">
                    <img src="img/ISanFrancisco/2.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center"> Portal de San Francisco (Frente a la Calle de los Pasos)</p>
+                        <p class="text-center text-danger"> Portal de San Francisco (Frente a la Calle de los Pasos)</p>
                      </footer>
             </div>
             <div class="col-md-6">
                    <img src="img/ISanFrancisco/3.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Altar Mayor del Templo de San Francisco,Santuario del Santo Hermano Pedro)</p>
+                        <p class="text-center text-danger">Altar Mayor del Templo de San Francisco,Santuario del Santo Hermano Pedro)</p>
                      </footer>
             </div>
              <div class="col-md-6">
                    <img src="img/ISanFrancisco/4.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center"> Capilla del Santísimo en el Templo de San Francisco,Santuario del Santo Hermano Pedro</p>
+                        <p class="text-center text-danger"> Capilla del Santísimo en el Templo de San Francisco,Santuario del Santo Hermano Pedro</p>
                      </footer>
             </div>
             <div class="col-md-12">
-                <p class="text-justify">El 28 de octubre de 1990, después del último reconocimiento canónico, los restos mortales del Hermano 
+                <p class="text-justify"></br></br>El 28 de octubre de 1990, después del último reconocimiento canónico, los restos mortales del Hermano 
                     Pedro fueron colocados en un sepulcro especial construido en la Capilla de la Vera Cruz, en el Templo de San Francisco. El 
                     Hermano Pedro fue Canonizado por Su Santidad el Papa Juan Pablo II, el 30 de julio de 2002.</p>
                 
-                <p class="text-justify">La presencia de los restos mortales del Santo Hermano Pedro es la razón por la que el señor Arzobispo de 
+                <p class="text-justify"></br></br>La presencia de los restos mortales del Santo Hermano Pedro es la razón por la que el señor Arzobispo de 
                     Guatemala, Su Excelencia Monseñor Rodolfo Quezada Toruño, el 30 de julio de 2003, elevó el Templo de San Francisco a Santuario Arquidiocesano.</p>
                 
-                <p class="text-justify">En la actualidad, el Templo de San Francisco, Santuario del Santo Hermano Pedro, es el lugar en el que convergen
-                    devotos peregrinos, de diferentes culturas e idiomas, para visitar el Sepulcro en el que se encuentran los santos restos del Hermano Pedro.<br/><br/></p>
+                <p class="text-justify"></br></br>En la actualidad, el Templo de San Francisco, Santuario del Santo Hermano Pedro, es el lugar en el que convergen
+                    devotos peregrinos, de diferentes culturas e idiomas, para visitar el Sepulcro en el que se encuentran los santos restos del Hermano Pedro.<br/></br><br/></p>
                 
             </div>
              <div class="col-md-6">
                    <img src="img/ISanFrancisco/5.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Sepulcro del Santo Hermano Pedro</p>
+                        <p class="text-center text-danger">Sepulcro del Santo Hermano Pedro</p>
                      </footer>
             </div>
             <div class="col-md-6">
@@ -486,8 +487,8 @@ and open the template in the editor.
                     difunde el Nacimiento de Jesús.<br/><br/></p>
             </div>
             <div class="col-md-12">
-                <p class="text-justify">En este Templo se pueden apreciar varios retablos de gran valor y devoción, entre los que pueden mencionarse:
-                   San Francisco, Cristo de las Ánimas, la Divina Pastora, y Nuestra Señora de Guadalupe.</p>
+                <p class="text-justify"></br></br>En este Templo se pueden apreciar varios retablos de gran valor y devoción, entre los que pueden mencionarse:
+                   San Francisco, Cristo de las Ánimas, la Divina Pastora, y Nuestra Señora de Guadalupe.</br></br></p>
             </div>
              
         <div class="col-md-6">
@@ -496,7 +497,7 @@ and open the template in the editor.
                 y a los feligreses reunidos en veneración.</p>
                    <img src="img/ISanFrancisco/6.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Mural de San Francisco</p>
+                        <p class="text-center text-danger">Mural de San Francisco</p>
                      </footer>
             </div>
              <div class="col-md-6">
@@ -506,38 +507,38 @@ and open the template in the editor.
                 una escultura en bronce fundido.<br/><br/><br/><br/><br/></p>
                    <img src="img/ISanFrancisco/7.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Jardín del Santo Hermano Pedro</p>
+                        <p class="text-center text-danger">Jardín del Santo Hermano Pedro</p>
                      </footer>
             </div>
              
             <div class="col-md-6">
-            <p class="text-justify">A la par de la torre de las campanas del Templo, se  reacondicionó
+            <p class="text-justify"></br></br>A la par de la torre de las campanas del Templo, se  reacondicionó
                 un jardín en el que se colocó una Cruz que sostiene figuras que representan los instrumentos
                 de la Pasión de Jesús.<br/><br/><br/></p>
                    <img src="img/ISanFrancisco/8.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Figuras que representan los instrumentos de la Pasión de Jesús</p>
+                        <p class="text-center text-danger">Figuras que representan los instrumentos de la Pasión de Jesús</p>
                      </footer>
             </div>
             <div class="col-md-6">
-            <p class="text-justify">Ingresando por la puerta situada en las ruinas de la torre sur del mismo Templo,
+            <p class="text-justify"></br></br>Ingresando por la puerta situada en las ruinas de la torre sur del mismo Templo,
                 se puede visitar la Biblioteca, las ruinas o el Museo del Santo Hermano Pedro. </p>
                    <img src="img/ISanFrancisco/9.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Templo de San Francisco,Santuario del Santo Hermano Pedro, iluminado</p>
+                        <p class="text-center text-danger">Templo de San Francisco,Santuario del Santo Hermano Pedro, iluminado</p>
                      </footer>
             </div>
             <div class="col-md-12">
-                <p class="text-justify">La Biblioteca del Templo 
+                <p class="text-justify"></br></br>La Biblioteca del Templo 
                 de San Francisco, Santuario del Santo Hermano Pedro, fue restaurada e inaugurada el 5 de diciembre de 2004, 
                 gracias a la cooperación del Gobierno de las Islas Canarias, de los frailes de Alemania y otros bienhechores; 
                 ofreciendo para su consulta bibliografía sobre Guatemala, La Antigua Guatemala, el Santo Hermano Pedro, la fe 
                 cristiana y otros documentos.</p>
-                <p class="text-justify"> En el atrio del Templo de San Francisco, Santuario del Santo Hermano Pedro, 
+                <p class="text-justify"> </br></br>En el atrio del Templo de San Francisco, Santuario del Santo Hermano Pedro, 
                     se encuentra la 'Tienda del Santo Hermano Pedro' en la que se pueden adquirir diversos recuerdos o 
                     souvenirs religiosos tales como libros, estampas, imágenes, medallas, crucifijos, rosarios, llaveros, 
                     cuadros, réplicas de la campanita del Santo Hermano Pedro, y otros. </p>
-                <p class="text-justify">Asimismo, en el atrio de este Templo, se ubican pequeñas tiendas en las que se
+                <p class="text-justify"></br></br>Asimismo, en el atrio de este Templo, se ubican pequeñas tiendas en las que se
                     pueden adquirir diversas artesanías en textiles típicos y en madera o jade, medallas, rosarios 
                     elaborados con semillas o madera, y otros, así como veladoras de diferentes colores</p>
             </div>
@@ -545,7 +546,7 @@ and open the template in the editor.
     </div>
         
     <!-- ============================ IGLESIA ESCUELA DE CRISTO ===================================== -->
-    <div id="IEscuelaCristo2" class="col-md-12" style='display:none;'>
+    <div id="IEscuelaCristo2" class="col-md-12 alert alert-warning" style='display:none;'>
         <div class="col-md-12">
             <p class="text-justify">La veneración popular por el Hermano Pedro fue desbordante. 
                 Fue necesario tomar serias medidas para poner orden al entusiasmo de las personas, 
@@ -554,26 +555,26 @@ and open the template in the editor.
                 Viendo que todos se arrodillaban ante el cadáver, el Obispo dijo cordialmente: "disculpen 
                 las formalidades y alaben a Dios en su humilde siervo. Forme cada uno en su interior el 
                 concepto que le dicte su vida ejemplar, que yo por mi parte lo tengo por varón grande, 
-                digno de toda reverencia."</p>
+                digno de toda reverencia."</br></br></p>
             <p class="text-justify">Con su ejemplo, motivó a las demás personas a un profundo sentimiento 
                 de veneración por el Hermano Pedro, rezándole desde ese momento, como a un verdadero santo.<br/><br/></p>
         </div>
         <div class="col-md-4">
                     <img src="img/IEscuelaCristo/1.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Exterior del Templo de la Escuela de Cristo</p>
+                        <p class="text-center text-danger">Exterior del Templo de la Escuela de Cristo</p>
                      </footer>
         </div>
         <div class="col-md-4">
                     <img src="img/IEscuelaCristo/2.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Altar mayor del Templo de la Escuela de Cristo</p>
+                        <p class="text-center text-danger">Altar mayor del Templo de la Escuela de Cristo</p>
                      </footer>
         </div>
          <div class="col-md-4">
                     <img src="img/IEscuelaCristo/3.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Imagen de Cristo Sepultado del Templo de la Escuela de Cristo</p>
+                        <p class="text-center text-danger">Imagen de Cristo Sepultado del Templo de la Escuela de Cristo</p>
                      </footer>
         </div>
         <div  class="col-md-12">
@@ -582,34 +583,34 @@ and open the template in the editor.
                 por el terremoto ocurrido en 1773. En la actualidad 
                 se encuentra parcialmente reconstruido y es muy visitado por los feligreses. En 1805, o años 
                 antes, la sede de la Parroquia de Nuestra Señora de los Remedios fue trasladada a la Escuela 
-                de Cristo.</p>
+                de Cristo.</br></p>
         </div>
         <div class="col-md-6">
                     <img src="img/IEscuelaCristo/4.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">La Parroquia de Nuestra Señora de los Remedios tiene su sede a la par del Templo de la Escuela de Cristo</p>
+                        <p class="text-center text-danger">La Parroquia de Nuestra Señora de los Remedios tiene su sede a la par del Templo de la Escuela de Cristo</p>
                      </footer>
         </div>
          <div class="col-md-6">
                     <img src="img/IEscuelaCristo/5.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Plaza frente al Templo de la Escuela de Cristo</p>
+                        <p class="text-center text-danger">Plaza frente al Templo de la Escuela de Cristo</p>
                      </footer>
         </div>
     </div>
     
     <!-- ============================ IGLESIA EL CALVARIO ===================================== -->
-    <div id="ICalvario2" class="col-md-12" style='display:none;'>
+    <div id="ICalvario2" class="col-md-12 alert alert-warning" style='display:none;'>
         <div class="col-md-6">
                     <img src="img/ICalvario/1.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Portal de la Ermita del Santo Calvario</p>
+                        <p class="text-center text-danger">Portal de la Ermita del Santo Calvario</p>
                      </footer>
         </div>
         <div class="col-md-6">
                     <img src="img/ICalvario/2.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Ermita del Santo Calvario</p>
+                        <p class="text-center text-danger">Ermita del Santo Calvario</p>
                      </footer>
         </div>
         <div class="col-md-4">
@@ -619,7 +620,7 @@ and open the template in the editor.
                 Calle de los Pasos. </p>
                     <img src="img/ICalvario/3.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Capilla que representa la Segunda Estación del Vía Crucis, en el inicio de la Calle de los Pasos</p>
+                        <p class="text-center text-danger">Capilla que representa la Segunda Estación del Vía Crucis, en el inicio de la Calle de los Pasos</p>
                      </footer>
         </div>
          <div class="col-md-4">
@@ -630,7 +631,7 @@ and open the template in the editor.
                 la IX y la X Estación del Vía Crucis.</p>
                     <img src="img/ICalvario/4.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Alameda del Calvario</p>
+                        <p class="text-center text-danger">Alameda del Calvario</p>
                      </footer>
         </div>
         <div class="col-md-4">
@@ -640,7 +641,7 @@ and open the template in the editor.
                 es decorativa.</p>
                     <img src="img/ICalvario/5.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center"> Fuente colonial en una de las vías de la Alameda 
+                        <p class="text-center text-danger"> Fuente colonial en una de las vías de la Alameda 
                             del Calvario. Al fondo, puede apreciarse el fin de la vía, y la capilla 
                             que representa la IX Estación del Vía Crucis</p>
                      </footer>
@@ -660,7 +661,7 @@ and open the template in the editor.
                 Así lograron concluirla en 1655.<br/><br/></p>
                     <img src="img/ICalvario/6.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Altar Mayor de la Ermita del Santo Calvario</p>
+                        <p class="text-center text-danger">Altar Mayor de la Ermita del Santo Calvario</p>
                      </footer>
         </div>
         <div class="col-md-6">
@@ -669,12 +670,12 @@ and open the template in the editor.
                 como el Cristo Crucificado del Hermano Pedro.</p>
                     <img src="img/ICalvario/7.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Cristo Crucificado del Hermano Pedro</p>
+                        <p class="text-center text-danger">Cristo Crucificado del Hermano Pedro</p>
                      </footer>
         </div>
         <div class="col-md-12">
-            <p class="text-justify">En el interior de esa imagen fueron encontrados dos documentos 
-                que evidencian la fecha en que se terminó la talla de la misma y el nombre de su autor:<br/><br/></p>
+            <p class="text-justify"></br></br>En el interior de esa imagen fueron encontrados dos documentos 
+                que evidencian la fecha en que se terminó la talla de la misma y el nombre de su autor:<br/></br><br/></p>
         </div>
        <div class="col-md-6">
             <p class="text-justify">Los documentos originales se resguardan en el Consejo Nacional 
@@ -685,9 +686,9 @@ and open the template in the editor.
                         <p class="text-center"></p>
                      </footer>
         </div>
-        <div class="col-md-6 table-responsive">
+        <div class="col-md-6 table-responsive ">
 
-           <table class="table table-bordered">
+           <table class="table table-bordered alert alert-success">
                 <thead>
                     <tr>
                         <th>Documento_1</th>
@@ -720,7 +721,7 @@ and open the template in the editor.
             </tbody>
             </table>
        
-           <table class="table table-bordered">
+           <table class="table table-bordered alert alert-success">
                 <thead>
                     <tr>
                         <th>Documento_2</th>
@@ -749,7 +750,7 @@ and open the template in the editor.
                 Calvario se venera una imagen con la advocación de Virgen de Dolores.<br/><br/></p>
                     <img src="img/ICalvario/10.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Imagen de Virgen de Dolores</p>
+                        <p class="text-center text-danger">Imagen de Virgen de Dolores</p>
                      </footer>
         </div>
         <div class="col-md-4">
@@ -757,7 +758,7 @@ and open the template in the editor.
                 singular: Según se dice, fue tallado con los labios entreabiertos 
                 para expresar  Benevolencia por los fieles, quienes arrodillados 
                 en oración, buscan a Dios.<br/><br/><br/><br/><br/><br/></p>
-                    <img src="img/ICalvario/9.jpg"  class="img-responsive img-circle center-block" >
+                    <img src="img/ICalvario/9.jpg"  class="img-responsive img-circle img-thumbnail center-block" >
                     <footer>
                         <p class="text-center"></p>
                      </footer>
@@ -771,27 +772,27 @@ and open the template in the editor.
                  imagen conocida como el  Cristo Crucificado del Hermano Pedro. </p>
                     <img src="img/ICalvario/11.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">El Árbol del Hermano Pedro</p>
+                        <p class="text-center text-danger">El Árbol del Hermano Pedro</p>
                      </footer>
         </div>
         <div class="col-md-12">
-            <p class="text-justify"><br/>La Ermita del Santo Calvario sufrió daños considerables 
+            <p class="text-justify"><br/></br>La Ermita del Santo Calvario sufrió daños considerables 
                 por el terremoto ocurrido en 1773. En la actualidad se encuentra parcialmente 
                 reconstruida y es muy visitada por los fieles devotos. Cada año, en Semana Santa, se prepara un huerto 
-                y una alfombra de aserrín de colores frente a la Capilla de La Piedad<br/></p>
+                y una alfombra de aserrín de colores frente a la Capilla de La Piedad<br/></br></p>
         </div>
        <div class="col-md-6">
             
                     <img src="img/ICalvario/12.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Huerto</p>
+                        <p class="text-center text-danger">Huerto</p>
                      </footer>
         </div>
        <div class="col-md-6">
             
                     <img src="img/ICalvario/13.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Alfombra de Aserrín</p>
+                        <p class="text-center text-danger">Alfombra de Aserrín</p>
                      </footer>
         </div>
         
@@ -800,17 +801,17 @@ and open the template in the editor.
    
     
      <!-- ============================ TEMPLO DE SAN PEDRO APOSTOL===================================== -->
-    <div id="ISanPedro2" class="col-md-12" style='display:none;'>
+    <div id="ISanPedro2" class="col-md-12 alert alert-warning" style='display:none;'>
         <div class="col-md-6">
                     <img src="img/ISanPedro/1.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Exterior Iglesia San Pedro Apóstol</p>
+                        <p class="text-center text-danger">Exterior Iglesia San Pedro Apóstol</p>
                      </footer>
         </div>
         <div class="col-md-6">
                     <img src="img/ISanPedro/2.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Altar Mayor de la Iglesia de San Pedro Apóstol</p>
+                        <p class="text-center text-danger">Altar Mayor de la Iglesia de San Pedro Apóstol</p>
                      </footer>
         </div>
         <div class="col-md-12">
@@ -827,16 +828,16 @@ and open the template in the editor.
                 de vida evangélica; resaltando, además, su abnegada entrega a la evangelización y a la promoción humana.</p></br>
                     <img src="img/ISanPedro/3.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Imagen del Santo Hermano Pedro</p>
+                        <p class="text-center text-danger">Imagen del Santo Hermano Pedro</p>
                      </footer>
         </div>
         <div class="col-md-4">
             <p class="text-justify"><br/><br/>En la Iglesia de San Pedro Apóstol se encuentra un mural 
                 pintado por Doña Rosamaría Pascual de Gámez, quien representa artísticamente cómo las 
                 Obras Sociales continúan actualmente la caridad del Santo Hermano Pedro.</p></br>
-                    <img src="img/ISanPedro/4.jpg"  class="img-responsive img-circle center-block" >
+                    <img src="img/ISanPedro/4.jpg"  class="img-responsive img-circle img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center">Pintura de Doña Rosamaría Pascual de Gómez</p>
+                        <p class="text-center text-danger">Pintura de Doña Rosamaría Pascual de Gómez</p>
                      </footer>
         </div>
          <div class="col-md-4">
@@ -846,7 +847,7 @@ and open the template in the editor.
                 Apostólica a Guatemala de Su Santidad el Papa Juan Pablo II. </p></br>
                     <img src="img/ISanPedro/5.jpg"  class="img-responsive img-thumbnail center-block" >
                     <footer>
-                        <p class="text-center"> Campana donada por el Gobierno de La Granilla, Tenerife Sur, Islas Canarias</p>
+                        <p class="text-center text-danger"> Campana donada por el Gobierno de La Granilla, Tenerife Sur, Islas Canarias</p>
                      </footer>
         </div>
         <div class="col-md-12">
@@ -871,7 +872,7 @@ and open the template in the editor.
      
      
          <!-- ============================ PARROQUIA ASUNCION===================================== -->
-    <div id="IAsuncion2" class="col-md-12" style='display:none;'>
+    <div id="IAsuncion2" class="col-md-12 alert alert-warning" style='display:none;'>
 
         <div class="col-md-12">
             <p class="text-justify">Esa población se fundó con el traslado de indígenas 
@@ -883,7 +884,7 @@ and open the template in the editor.
                    
         </div>
         <div class="col-md-12">
-            <p class="text-justify">En la plaza mayor, frente al templo, puede observarse 
+            <p class="text-justify"></br>En la plaza mayor, frente al templo, puede observarse 
                 una cruz, tallada en piedra, que presenta la inscripción “JHS-AM-1571”, 
                 que es el año en el que, posiblemente, inició el servicio religioso su antigua 
                 ermita, de pequeñas dimensiones, dedicada a Nuestra Señora de la Asunción, la 
@@ -897,21 +898,27 @@ and open the template in the editor.
              </br>
                     <img src="img/IAsuncion/1.jpg"  class="img-responsive img-thumbnail center-block" >
                    </br>
-        </div>
+                     <footer>
+                
+                <p class="text-center text-danger">Antigua ermita, en ruinas</p>
+                     </footer>
+            </div>
+        
         <div class="col-md-6">
             </br>
                     <img src="img/IAsuncion/2.jpg"  class="img-responsive img-thumbnail center-block" >
                     </br>
-        </div>
-            </br>
+                    
             <footer>
-                <p></br></p>
-                <p class="text-center">Antigua ermita, en ruinas, y una cruz atrial en la amplia plaza</p>
+                
+                <p class="text-center text-danger">Una cruz atrial en la amplia plaza</p>
                      </footer>
+        </div>
+            
             </div>
         
         <div class="col-md-12">
-            <p class="text-justify"><br/>Contiguo a esa ermita, en 1602, los frailes dominicos construyeron 
+            <p class="text-justify"><br/><br/>Contiguo a esa ermita, en 1602, los frailes dominicos construyeron 
                 un templo con mayor amplitud. En las hornacinas de esa edificación, pueden observarse 
                 esculturas talladas en estuco que representan a San Pedro y San Pablo Apóstoles; las de 
                 San Francisco de Asís y Santo Domingo de Guzmán, en el centro; y la imagen de Virgen de la 
@@ -930,14 +937,14 @@ and open the template in the editor.
                     <img src="img/IAsuncion/4.jpg"  class="img-responsive img-thumbnail center-block" >
                     </br>
         </div>
-            </br>
+            
             <footer>
-                <p></br></p>
-                <p class="text-center">Antigua ermita, en ruinas, y una cruz atrial en la amplia plaza</p>
+                
+                <p class="text-center text-danger">Fachada e interior de la Parroquia Nuestra Señora de la Asunción</p>
                      </footer>
             </div>
         <div class="col-md-12">
-            <p class="text-justify">
+            <p class="text-justify"><br><br/>
                 En dicha plaza, también puede apreciarse la fuente de mampostería 
                 y piedra tallada, de singular belleza y única en su trazo, instalada 
                 el 30 de julio de 1733. Después de la ruina de la ciudad de Santiago de 
@@ -966,17 +973,17 @@ and open the template in the editor.
         
                <div class="col-md-12">
          <div class="col-md-6">
-             </br>
+             </br><br/>
                     <img src="img/IAsuncion/5.jpg"  class="img-responsive img-thumbnail center-block" >
                    </br>
                    <footer>
                
-                <p class="text-center"> Capilla de Jesús Nazareno "El Dulce Rabí"</p>
+                <p class="text-center text-danger"> Capilla de Jesús Nazareno "El Dulce Rabí"</p>
                      </footer>
         </div>
         <div class="col-md-6">
             </br>
-                    <img src="img/IAsuncion/6.jpg"  class="img-responsive img-thumbnail center-block" >
+                    <img src="img/IAsuncion/6.jpg"  class="img-responsive img-thumbnail img-circle center-block" >
                     </br>
         </div>
             </br>
@@ -986,17 +993,17 @@ and open the template in the editor.
         
         <div class="col-md-12">
          <div class="col-md-6">
-             </br>
-                    <img src="img/IAsuncion/7.jpg"  class="img-responsive img-thumbnail center-block" >
+             </br><br/>
+                    <img src="img/IAsuncion/7.jpg"  class="img-responsive img-thumbnail  center-block" >
                    </br>
                    <footer>
                
-                <p class="text-center">  Altar de Virgen de Dolores "Dulce Madre de Jocotenango"</p>
+                <p class="text-center text-danger">  Altar de Virgen de Dolores "Dulce Madre de Jocotenango"</p>
                      </footer>
         </div>
         <div class="col-md-6">
             </br>
-                    <img src="img/IAsuncion/8.jpg"  class="img-responsive img-thumbnail center-block" >
+                    <img src="img/IAsuncion/8.jpg"  class="img-responsive img-thumbnail img-circle center-block" >
                     </br>
         </div>
             </br>
@@ -1004,7 +1011,7 @@ and open the template in the editor.
             </div>
         
         <div class="col-md-12">
-            <p class="text-justify">
+            <p class="text-justify"><br/><br/>
                  La economía de los pobladores está basada fundamentalmente en servicios, 
                  industria, agricultura y artesanías. Entre estas últimas se mencionan: joyería, 
                  cerámica, bronce, hierro forjado y pintura, así como madera tallada. La festividad 
@@ -1016,8 +1023,9 @@ and open the template in the editor.
         </div>
         
     </div>
-         
-         <div id="ISanFelipe2" class="col-md-12" style='display:none;'>
+     
+  <!--============================ IGLESIA SAN FELIPE ===================================-->       
+         <div id="ISanFelipe2" class="col-md-12 alert alert-warning" style='display:none;'>
              <div class="col-md-12">
                  <p class="text-justify">
                      El traslado les fue autorizado. Debido a su religiosidad, 
@@ -1046,11 +1054,11 @@ and open the template in the editor.
              
               <div class="col-md-4">
              </br>
-                    <img src="img/ISanFelipe/1.jpg"  class="img-responsive img-thumbnail center-block" >
+                    <img src="img/ISanFelipe/1.jpg"  class="img-responsive img-thumbnail img-circle center-block" >
                    </br>
                    <footer>
                
-                <p class="text-center">  A Santuario del Apóstol San Felipe </p>
+                <p class="text-center text-danger">  A Santuario del Apóstol San Felipe </p>
                 
                      </footer>
         </div>
@@ -1074,11 +1082,11 @@ and open the template in the editor.
              </div>
          <div class="col-md-4">
              </br>
-                    <img src="img/ISanFelipe/2.jpg"  class="img-responsive img-thumbnail center-block" >
+                    <img src="img/ISanFelipe/2.jpg"  class="img-responsive img-thumbnail img-circle center-block" >
                    </br>
                    <footer>
                
-                <p class="text-center"> Campanario en la Cúpula del Santuario</p>
+                <p class="text-center text-danger"> Campanario en la Cúpula del Santuario</p>
                      </footer>
         </div>
              
@@ -1087,11 +1095,11 @@ and open the template in the editor.
                  <p class="text-center">En el retablo del altar mayor se encuentra la urna del Señor Sepultado.</p>
                  <div class="col-md-4">
              </br>
-                    <img src="img/ISanFelipe/3.jpg"  class="img-responsive img-thumbnail center-block" >
+                    <img src="img/ISanFelipe/3.jpg"  class="img-responsive img-thumbnail img-circle center-block" >
                    </br>
                    <footer>
                
-                <p class="text-center">Vitral San Felipe de Jesús</p>
+                <p class="text-center text-danger">Vitral San Felipe de Jesús</p>
                      </footer>
         </div>
                  
@@ -1102,7 +1110,7 @@ and open the template in the editor.
                    
                    <footer>
                
-                <p class="text-center"> Altar Mayor </p>
+                <p class="text-center text-danger"> Altar Mayor </p>
                      </footer>
                 </div>
                  <div class="col-md-4">
@@ -1112,7 +1120,7 @@ and open the template in the editor.
                    </br>
                    <footer>
                
-                <p class="text-center"> Urna</p>
+                <p class="text-center text-danger"> Urna</p>
                      </footer>
                 </div>
              </div>
@@ -1123,20 +1131,20 @@ and open the template in the editor.
                  </p>
                  <div class="col-md-6">
                  </br>
-                    <img src="img/ISanFelipe/6.jpg"  class="img-responsive img-circle center-block" >
+                    <img src="img/ISanFelipe/6.jpg"  class="img-responsive img-thumbnail img-circle center-block" >
                    </br>
                    <footer>
                
-                <p class="text-center"> Capilla del Santísimo </p>
+                <p class="text-center text-danger"> Capilla del Santísimo </p>
                      </footer>
                 </div>
                   <div class="col-md-6">
                  </br>
-                    <img src="img/ISanFelipe/7.jpg"  class="img-responsive img-circle center-block" >
+                    <img src="img/ISanFelipe/7.jpg"  class="img-responsive img-thumbnail img-circle center-block" >
                    </br>
                    <footer>
                
-                <p class="text-center"> Altar </p>
+                <p class="text-center text-danger"> Altar </p>
                      </footer>
                 </div>
              </div>
@@ -1146,17 +1154,17 @@ and open the template in the editor.
          
          
            <!-- ============================ MERCADO===================================== -->
-           <div id="Mercado2" class="col-md-12" style='display:none;'>
-               <p class="text-center">
+           <div id="Mercado2" class="col-md-12 alert alert-warning" style='display:none;'>
+               <p class="text-center"></br>
                    Las instalaciones de este Mercado de Artesanías se observan así:
-               </p>
+                   </br></br></p>
                <div class="col-md-6">
                  </br>
                     <img src="img/Mercado/1.jpg"  class="img-responsive img-thumbnail center-block" >
                    </br>
                    <footer>
                
-                <p class="text-center"> Amplios corredores para comodidad del visitante</p>
+                <p class="text-center text-danger"> Amplios corredores para comodidad del visitante</p>
                      </footer>
                 </div>
                    <div class="col-md-6">
@@ -1165,7 +1173,7 @@ and open the template in the editor.
                    </br>
                    <footer>
                
-                <p class="text-center">En el patio interior, una fuente proporciona un ambiente colonial al lugar</p>
+                <p class="text-center text-danger">En el patio interior, una fuente proporciona un ambiente colonial al lugar</p>
                      </footer>
                 </div>
                     <div class="col-md-6">
@@ -1174,7 +1182,7 @@ and open the template in the editor.
                    </br>
                    <footer>
                
-                <p class="text-center"> La atención al turista es cordial y amable</p>
+                <p class="text-center text-danger"> La atención al turista es cordial y amable</p>
                      </footer>
                 </div>
                     <div class="col-md-6">
@@ -1183,14 +1191,14 @@ and open the template in the editor.
                    </br>
                    <footer>
                
-                <p class="text-center">En tejidos pueden adquirirse originales diseños</p>
+                <p class="text-center text-danger">En tejidos pueden adquirirse originales diseños</p>
                      </footer>
                 </div>
            </div>
          
          
            <!-- ===========================ARCO SANTA CATALINA===================================== -->
-           <div id="Arco2" class="col-md-12" style='display:none;'>
+           <div id="Arco2" class="col-md-12 alert alert-warning" style='display:none;'>
                
                <p class="text-justify">
                    Lógicamente, las monjas de reclusión, apartadas de la sociedad 
@@ -1259,8 +1267,8 @@ and open the template in the editor.
            
         </div> <!-- FIN DIV COL-->
         <hr>
-   <footer>
-        <p>&copy; Company 2015</p>
+        <footer class="alert alert-danger">
+            <p>&copy; Company 2015</p>
       </footer>
     </div>
       
