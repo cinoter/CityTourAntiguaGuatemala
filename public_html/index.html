@@ -37,18 +37,30 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse" >
             <form class="navbar-form navbar-right" role="form" >
-                <input type="radio" name="group1" onclick="tipo_tour(0);" value="Tour Manual" checked><label class="ttiempo">Tour Manual </label>
-              <input type="radio" name="group1" onclick="tipo_tour(1);" value="Tour Automatico" ><label class="ttiempo">Tour Automatico</label> <br>
-              <div id="dtiempo" style='display:none;' > 
-                  <label class="ttiempo"> Tiempo: </label>    
-              <input  type="radio" name="group2"  onclick="pone_tiempo(1);" value="1" checked> 
-              <label class="ttiempo">1 min</label>   
-              <input type="radio" name="group2"  onclick="pone_tiempo(2);" value="2" >
-              <label class="ttiempo"> 2 min </label>   
-              <input type="radio" name="group2"   onclick="pone_tiempo(3);" value="3">
-              <label class="ttiempo"> 3 min </label>   
+          <div class="btn-group">
+  <button type="button" class="btn btn-success btn-sm  dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    Iniciar tour<span class="caret"></span>
+  </button>
+      <ul class="dropdown-menu" role="menu">
+    <li><a href="#" onclick="ir_tour(0,0);" >Manual</a></li>
+    <li><a href="#" onclick="tipo_tour();">Automatico</a></li>
+    </ul>
+    </div>
+   <div class="btn-group" id="dtiempo" style='display:none;'>
+  <button type="button" class="btn btn-success btn-sm  dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    Tiempo<span class="caret"></span>
+  </button>
+      <ul class="dropdown-menu" role="menu">
+    <li><a href="#" onclick="ir_tour(1,1);" >1 min</a></li>
+    <li><a href="#" onclick="ir_tour(1,2);" >2 min</a></li>
+    <li><a href="#" onclick="ir_tour(1,3);" >3 min</a></li>
+    <li><a href="#" onclick="ir_tour(1,4);" >4 min</a></li>
+    </ul>
+    </div>          
+              <div > 
+                
               </div>
-              <button type="button" class="btn btn-success" onclick="ir_tour();" >Iniciar tour</button>
+
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -58,14 +70,7 @@
     <div class="jumbotron">
       <div class="container">
           <h1 class="text-center">City Tour Antigua Guatemala</h1>
-          <p class="text-justify">  </p>
-
-        <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
-      </div>
-    </div>
-
-  <div class="container">
-      <div id="myCarousel" class="carousel slide">
+          <div id="myCarousel" class="carousel slide">
       <!--ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -146,10 +151,35 @@
       <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
       <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
-      
-      
-   <footer>
-        <p>&copy; Company 2015</p>
+
+        <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
+      </div>
+    </div>
+
+  <div class="container">
+        <div  class="container-fluid bg-warning">
+          
+              <h4 class="text-left">¿Que es City Tour Antigua Guatemala?</h4>
+              <p class="text-justify"> 
+                  Es un sitio donde usted podrá conocer de una forma interactiva la historia que ha marcado muchos de los 
+                  lugares en la ciudad de Antigua Guatemala, presentándole un recorrido de los lugares más sobresalientes de la ciudad de Antigua Guatemala,
+                  el cual usted puede dejarse guiar automáticamente o realizar  manera manual dicho recorrido.
+                  </p>
+                  <p class="text-justify">
+                      Se muestra un mapa geográfico  que contiene marcadores  con los cuales usted podrá ver los lugares 
+                      que pertenecen al recorrido, así como la ubicación de los mismos. 
+                  </p>
+                  <p class="text-justify"> 
+                   También contiene una sección de localización, en la cual usted podrá ingresar la ubicación del lugar al cual sea ir y
+                    el sitio le muestra el recorrido que debe de tomar para llegar a él. 
+                  </p>
+             
+
+                              
+          </div>
+   <hr>
+        <footer class="alert alert-danger">
+            <p>&copy; Company 2015</p>
       </footer>
       
     </div>

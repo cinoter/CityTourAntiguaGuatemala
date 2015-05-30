@@ -60,7 +60,9 @@ and open the template in the editor.
         </div>
           <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form">
-              <button type="button" class="btn btn-success" onclick="salir();">Dejar tour</button>
+              <button type="button" class="btn btn-sm  btn-success" onclick="salir();">
+              <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+              </button>
           </form>
         </div><!--/.navbar-collapse -->
          </div>
@@ -80,42 +82,58 @@ and open the template in the editor.
     
   <div class="container">
   <div class="row">
-      <div id="map-outer" class="col-md-12">
-          <div id="map-container" class="col-md-8"></div>
+      <div id="map-outer" class="col-md-12 alert alert-warning">
+          <div id="map-container"  class="col-md-8 ">
+              
+          </div>
           
-          <div id="address" class="col-md-4" >
-          Origen: <input type="text" id="inicio" placeholder="address or coordinates" /><br>
-          Destino:
-		<select id="fin" class="routeOptions" >
-	        <option value="14.559666, -90.734259" selected="selected">Iglesia de la Merced</option>
-          	<option value="14.561210, -90.734190">Catedran de San Jose</option>
-          	<option value="14.556714, -90.732711">Templo de San Francisco</option>
-      	</select><br>
+          <div id="address"class="col-md-4 alert alert-success" >
 Tipo de Viaje: 
 		<select id="modo" class="routeOptions" >
-			<option value="DRIVING" selected="selected">En Auto</option>
+                <option value="DRIVING" selected="selected">En Auto</option>
           	<option value="BICYCLING">En Bicicleta</option>
           	<option value="WALKING">Caminando</option>
-      	</select><br>            
-               
-            <button type="button" class="btn btn-success" onclick="Busqueda();">Busqueda</button>
+      	</select><br>
+        
+   <div class="input-group">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Lugar<span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li onclick="pone_coordenadas('14.574711,-90.740990');"><a href="#">Parroquia de Nuestra Señora de la Asunción</a></li>
+          <li onclick="pone_coordenadas('14.573117,-90.734641');"><a href="#">Santuario del Apóstol San Felipe</a></li>
+          <li onclick="pone_coordenadas('14.561210,-90.734190');"><a href="#">Iglesia de la Merced</a></li>
+          <li onclick="pone_coordenadas('14.559594,-90.734163');"><a href="#">Arco de Santa Catalina</a></li>
+          <li onclick="pone_coordenadas('14.557168,-90.739544');"><a href="#">Mercado de Artesanías</a></li>
+          <li onclick="pone_coordenadas('14.556714,-90.732711');"><a href="#">Catedral de San Jose</a></li>
+          <li onclick="pone_coordenadas('14.555124,-90.732211');"><a href="#">Iglesia San Pedro Apóstol</a></li>
+          <li onclick="pone_coordenadas('14.553993, -90.729441');"><a href="#">Templo de San Francisc</a></li>
+          <li onclick="pone_coordenadas('14.551444, -90.729783');"><a href="#">Templo de la Escuela de Cristo</a></li>
+          <li onclick="pone_coordenadas('14.545278, -90.729785');"><a href="#">Iglesia Ermita del Santo Calvario</a></li>
+        </ul>
+        <button type="button" class="btn btn-default" onclick="Busqueda();" aria-label="Left Align">
+       <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+      </button>
+      </div><!-- /btn-group -->
+      <input type="text" class="form-control" id="fin" aria-label="lgar destino">
+    </div><!-- /input-group -->
+
+    <div class="container-fluid table" id="direcciones" >
+  </div>
+    </div>
 
           </div>
          
         </div> <!-- FIN DIV COL-->
-        <hr>
-   <footer>
-        <p>&copy; Company 2015</p>
+      <hr>
+        <footer class="alert alert-danger">
+            <p>&copy; Company 2015</p>
       </footer>
     </div>
       
-      </div>
+      
          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
-
         <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

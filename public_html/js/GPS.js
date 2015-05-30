@@ -6,13 +6,11 @@
 
 var map;
 var markers = [];
-var infoWin=[];
+var infowindow;
 var sitio = "address";
 var r_lugar=['IMerced','ISanJose','ISanFrancisco','IEscuelaCristo','ICalvario'];
 var r_info=["<h4>Iglesia de la Merced</h4>","<h4>Catedran de San Jose</h4>","<h4>Templo de San Francisco</h4> Santuario del Santo Hermano Pedro","<h4>Templo de la Escuela de Cristo</h4>","<h4>Iglesia Ermita del Santo Calvario</h4>"];
-var coordenadas=[];  
 var rutas;
-
 var directionsDisplay = null;
 var directionsService = null;
     
@@ -20,42 +18,71 @@ var directionsService = null;
 //==============================================================================
 //======================= MAPA =================================================
 //==============================================================================
-
 function initialize() {
-  var myLatlng = new google.maps.LatLng(14.5567871, -90.728000);
-  var coordenadasArco = new google.maps.LatLng(14.559666, -90.734259);
+  var myLatlng = new google.maps.LatLng(14.5617991, -90.728000);
+  var coordenadasArco = new google.maps.LatLng(14.559594, -90.734163);
   var coordenadasIglesiaMerced = new google.maps.LatLng(14.561210, -90.734190);
   var coordenadasIglesiaSanJose=new google.maps.LatLng(14.556714, -90.732711);
   var corrdenadasIglesiaSanFrancisco=new google.maps.LatLng(14.553993, -90.729441);
   var corrdenadasIglesiaEscuelaCristo=new google.maps.LatLng(14.551444, -90.729783);
   var corrdenadasIglesiaCalvario=new google.maps.LatLng(14.545278, -90.729785);
-  coordenadas.push(coordenadasIglesiaMerced);
-  coordenadas.push(coordenadasIglesiaSanJose);
-  coordenadas.push(corrdenadasIglesiaSanFrancisco);
-  coordenadas.push(corrdenadasIglesiaEscuelaCristo);
-  coordenadas.push(corrdenadasIglesiaCalvario);
-  infowindow = new google.maps.InfoWindow();
+  var coordenadasSanPedroApostol=new google.maps.LatLng(14.555124, -90.732211);
+  var coordenadasParroquiaAsuncion=new google.maps.LatLng(14.574711, -90.740990); 
+  var coordenadasIglesiaSanFelipe=new google.maps.LatLng(14.573117, -90.734641);
+  var coordenadasMercado=new google.maps.LatLng(14.557168, -90.739544);
   
-  directionsDisplay = new google.maps.DirectionsRenderer();
-  directionsService = new google.maps.DirectionsService();
+ infowindow = new google.maps.InfoWindow();
+ directionsDisplay = new google.maps.DirectionsRenderer();
+ directionsService = new google.maps.DirectionsService();
+ 
   var mapOptions = {
     zoom: 14,
-    center: myLatlng,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    center: myLatlng
   };
 
    map = new google.maps.Map(document.getElementById('map-container'), mapOptions);
      //arco de santa catalina
 
+ /**********************************Parroquia Nuetra Señora de la Asuncion******************************/
+  var marcadorParroquiaAsuncion = new google.maps.Marker({
+      position: coordenadasParroquiaAsuncion,
+      map: map,
+      title: 'Parroquia de Nuestra Señora de la Asuncion'
+  });
+  marcadorParroquiaAsuncion.setIcon('img/iconos/cty1.png')
 
+ /*********************iglesia san felipe***********************/
+  var marcadorIglesiaSanFelipe = new google.maps.Marker({
+      position: coordenadasIglesiaSanFelipe,
+      map: map,
+      title: 'Iglesia de San Felipe'
+  });
+ marcadorIglesiaSanFelipe.setIcon('img/iconos/cty1.png');
+ 
+ 
 /*********************iglesia merced***********************/
   var marcadorIglesiaMerced = new google.maps.Marker({
       position: coordenadasIglesiaMerced,
       map: map,
       title: 'Iglesia de la Merced'
   });
-  markers.push(marcadorIglesiaMerced);
  marcadorIglesiaMerced.setIcon('img/iconos/cty1.png');
+ 
+  /*********************Arco santa catalina***********************/
+  var marcadorArco = new google.maps.Marker({
+      position: coordenadasArco,
+      map: map,
+      title: 'Arco de Santa Catalina'
+  });
+ marcadorArco.setIcon('img/iconos/cty1.png');
+ 
+  /******************Mercado***********************/
+  var marcadorMercado = new google.maps.Marker({
+      position: coordenadasMercado,
+      map: map,
+      title: 'Mercado de Artesanías'
+  });
+ marcadorMercado.setIcon('img/iconos/cty1.png');
  
  
  /******************************Catedral de San Jose**********************/
@@ -64,10 +91,18 @@ function initialize() {
       map: map,
       title: 'Catedral de San Jose'
   });
-  markers.push(marcadorIglesiaSanJose);
   marcadorIglesiaSanJose.setIcon('img/iconos/cty1.png');
   
+
   
+   /*********************iglesia San Pedro Apostol***********************/
+  var marcadorIglesiaSanPedroApostol = new google.maps.Marker({
+      position: coordenadasSanPedroApostol,
+      map: map,
+      title: 'Iglesia de San Pedro Apóstol'
+  });
+ marcadorIglesiaSanPedroApostol.setIcon('img/iconos/cty1.png');
+ 
   /*****************Catedral de San Francisco**********************/
 
   var marcadorIglesiaSanFrancisco = new google.maps.Marker({
@@ -75,18 +110,13 @@ function initialize() {
       map: map,
       title: 'Iglesia San Francisco'
   });
-  markers.push(marcadorIglesiaSanFrancisco);
   marcadorIglesiaSanFrancisco.setIcon('img/iconos/cty1.png');
-  
-  
-  
   /**************************Templo de la Escuela de Cristo****************************/
   var marcadorIglesiaEscuelaCristo = new google.maps.Marker({
       position: corrdenadasIglesiaEscuelaCristo,
       map: map,
       title: 'Iglesia Escuela de Cristo'
   });
-  markers.push(marcadorIglesiaEscuelaCristo);
   marcadorIglesiaEscuelaCristo.setIcon('img/iconos/cty1.png');
   
   
@@ -96,10 +126,9 @@ function initialize() {
       map: map,
       title: 'El Calvario'
   });
-  markers.push(marcadorIglesiaCalvario);
-  marcadorIglesiaCalvario.setIcon('img/iconos/cty1.png')
-   
+  marcadorIglesiaCalvario.setIcon('img/iconos/cty1.png');
 }
+
 
 
 //funcion para poner el titulo en la ventana emergente y en el marcador
@@ -114,20 +143,19 @@ function pone_info_emergent(marcador,frase){
   function salir(){     
        location.href = "index.html?rr=8O";
   }
-
-	function Busqueda(){
+  
+function Busqueda(){
               // Try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      var inicio = new google.maps.LatLng(position.coords.latitude,
-                                       position.coords.longitude);
+      var inicio = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
 
-      		//var inicio = document.getElementById("inicio").value;
+  
 		var fin = document.getElementById("fin").value;
                 var modo = document.getElementById("modo").value;
  
-		if(!inicio || !fin){
-			alert("Se requiere de ubicacion origen");
+		if(!fin){
+			alert("Lugar destino no ingresado");
 			return;
 		}
 		var request = {
@@ -140,10 +168,10 @@ function pone_info_emergent(marcador,frase){
 		directionsService.route(request, function(response, status) {
 	        if (status == google.maps.DirectionsStatus.OK) {
 	            directionsDisplay.setMap(map);
-	            //directionsDisplay.setPanel(null);
+	            directionsDisplay.setPanel($("#direcciones").get(0));
 	            directionsDisplay.setDirections(response);
 	        } else {
-	            alert("There is no directions available between these two points");
+	            alert("La direccion ingresada no se a podido encontrar");
 	        }
 	    });
 
@@ -155,10 +183,12 @@ function pone_info_emergent(marcador,frase){
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
-
-            
-
-	}
+        }
+        
+ function pone_coordenadas(lugar){
+    document.getElementById("fin").value= lugar;
+     Busqueda(); 
+}
 google.maps.event.addDomListener(window, 'load', initialize);   
   
 

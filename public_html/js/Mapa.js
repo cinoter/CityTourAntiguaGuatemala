@@ -8,7 +8,7 @@ var ttour=obtenerGET(0);
 var tiempo=obtenerGET(1);
 var map;
 var markers = [];
-var infoWin=[];
+var infowindow;
 var index =0;
  var cronometro;
 var sitio = "address";
@@ -38,7 +38,6 @@ function initialize() {
   var coordenadasSanPedroApostol=new google.maps.LatLng(14.555124, -90.732211);
   var coordenadasParroquiaAsuncion=new google.maps.LatLng(14.574711, -90.740990); 
   var coordenadasIglesiaSanFelipe=new google.maps.LatLng(14.573117, -90.734641);
-  
   var coordenadasMercado=new google.maps.LatLng(14.557168, -90.739544);
   
   
@@ -52,8 +51,6 @@ function initialize() {
   coordenadas.push(corrdenadasIglesiaSanFrancisco);
   coordenadas.push(corrdenadasIglesiaEscuelaCristo);
   coordenadas.push(corrdenadasIglesiaCalvario);
-
-
   infowindow = new google.maps.InfoWindow();
   
   var mapOptions = {
@@ -78,7 +75,7 @@ function initialize() {
     mostrarSitio('IAsuncion');
       }
   });
-  markers.push(marcadorIglesiaCalvario);
+  markers.push(marcadorParroquiaAsuncion);
   marcadorParroquiaAsuncion.setIcon('img/iconos/cty1.png')
 
  /*********************iglesia san felipe***********************/
@@ -222,13 +219,7 @@ function initialize() {
       }
   });
   markers.push(marcadorIglesiaCalvario);
-  marcadorIglesiaCalvario.setIcon('img/iconos/cty1.png')
- 
-
- 
-
- 
-  
+  marcadorIglesiaCalvario.setIcon('img/iconos/cty1.png');
   crea_poligono();
 }
 
@@ -273,8 +264,7 @@ function setAllMap(map) {
   for (var i = 0; i < markers.length; i++) {
       if(i!=omitir)
       {
-          markers[i].setMap(map);
-         
+          markers[i].setMap(map); 
       }
       else
       {
@@ -301,8 +291,11 @@ function showMarkers() {
 
  //fucion para verificar si el tour es automatico o manual
 function inicia_tour(){
-    if(ttour !=1)
+    if(ttour !=1){
             detenerse();
+        document.getElementById("minutos").style.display = "none";
+        document.getElementById("segundos").style.display = "none";
+         }
     else{
         mostrarSitio(r_lugar[index]);
         pone_info_emergent(markers[index],r_info[index]);
