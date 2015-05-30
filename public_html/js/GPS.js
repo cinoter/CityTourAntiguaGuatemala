@@ -151,7 +151,7 @@ function Busqueda(){
       var inicio = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
 
   
-		var fin = document.getElementById("fin").value;
+		var fin = document.getElementById("fin").value+" ,Antigua Guatemala";
                 var modo = document.getElementById("modo").value;
  
 		if(!fin){
