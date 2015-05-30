@@ -12,7 +12,8 @@
        }
   
 	#krcel{
-	   padding-left: 8.5%
+	   padding-left: 7.3%
+               
 	       }
 
                
@@ -21,8 +22,10 @@
             #map-outer  { 
                         height: 40% }
             #krcel{
-                         padding-left: 8.5%
+                         padding-left: 7.3%
+                             
                          }
+            
             #img2 { display : block; }
             #img3 { display : block; }
                         }

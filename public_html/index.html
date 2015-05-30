@@ -70,8 +70,8 @@
     <div class="jumbotron">
       <div class="container">
           <h1 class="text-center">City Tour Antigua Guatemala</h1>
-          <div id="myCarousel" class="carousel slide">
-      <!--ol class="carousel-indicators">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -79,28 +79,32 @@
         <li data-target="#myCarousel" data-slide-to="4"></li>
 		<li data-target="#myCarousel" data-slide-to="6"></li>
 		<li data-target="#myCarousel" data-slide-to="7"></li>
-      </ol-->
+      </ol>
       <!-- Carousel items -->
-      <div class="carousel-inner">
+      <div class="alert alert-success">
+      <div class="carousel-inner"  role="listbox">
 	  
-        <div class="active item">
+         <!--================= PRIMER ITEM ==================-->
+        <div class="item active">
 		<div class="row-fluid" id="krcel" >
-		<img  src="img/ISanPedro/1.jpg"  id="img1" class="img-rounded" alt="banner1" />
+	<img  src="img/ISanPedro/1.jpg"  id="img1" class="img-rounded " alt="banner1" />
         <img  src="img/ISanPedro/2.jpg"  id="img2" class="img-rounded" alt="banner1" />
         <img  src="img/ISanPedro/3.jpg"  id="img3" class="img-rounded" alt="banner1" />
 		
         </div>
+  
         </div>
-		
-		<div class="item">
+	<!--================= SEGUNDO ITEM ==================-->	
+	<div class="item">
 		<div class="row-fluid" id="krcel">
 		<img  src="img/ISanJose/1.jpg"  id="img1" class="img-rounded" alt="banner2" />
         <img  src="img/ISanJose/4.jpg" id="img2" class="img-rounded" alt="banner2" />
 		<img  src="img/ISanJose/5.jpg" id="img3" class="img-rounded" alt="banner2" />
 	
         </div>
-		</div>
-		
+	</div>
+	
+        <!--================= TERCER ITEM ==================-->
         <div class="item">
 		<div class="row-fluid" id="krcel" >
 		<img  src="img/ISanFrancisco/1.jpg"  id="img1" class="img-rounded" alt="banner3" />
@@ -108,18 +112,21 @@
 		<img  src="img/ISanFrancisco/3.jpg"  id="img3" class="img-rounded" alt="banner3" />
 	
         </div>
-		</div>
+	</div>
+        
+        
+        <!--================= CUARTO ITEM ==================-->
 		
-		<div class="item">
+	<div class="item">
 		<div class="row-fluid" id="krcel" >
 		<img  src="img/IMerced/1.jpg"  id="img1" class="img-rounded" alt="banner4" />
         <img  src="img/IMerced/2.jpg"  id="img2" class="img-rounded" alt="banner4" />
 		<img  src="img/IMerced/3.jpg"  id="img3" class="img-rounded" alt="banner4" />
 	
         </div>
-		</div>
+	</div>
 
-		 
+	<!--================= QUINTO ITEM ==================-->	 
         <div class="item">
 		<div class="row-fluid" id="krcel">
 		<img  src="img/IAsuncion/3.jpg"  id="img1" class="img-rounded" alt="banner5" />
@@ -128,7 +135,8 @@
 		
         </div>
         </div>
-		
+	
+        <!--================= SEXTO ITEM ==================-->
         <div class="item" >
 		<div class="row-fluid" id="krcel">
 		<img  src="img/ICalvario/1.jpg"  id="img1" class="img-rounded" alt="banner6" />
@@ -136,28 +144,37 @@
 		<img  src="img/ICalvario/6.jpg"  id="img3" class="img-rounded" alt="banner6" />
         
         </div>
-		</div>
-		
+	</div>
+	
+        
+        <!--================= SEPTIMO ITEM ==================-->
         <div class="item">
 		<div class="row-fluid" id="krcel">
 		<img  src="img/IEscuelaCristo/1.jpg"  id="img1" class="img-rounded" alt="banner7" />
         <img  src="img/IEscuelaCristo/2.jpg"  id="img2" class="img-rounded" alt="banner7" />
         <img  src="img/IEscuelaCristo/3.jpg"  id="img3" class="img-rounded" alt="banner7" />
         </div>
-		</div>
+	</div>
 		
       </div>
-      <!-- Carousel nav -->
-      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div>
+     <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>   </div>
 
+      
+      </div>
         <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
       </div>
     </div>
 
   <div class="container">
-        <div  class="container-fluid bg-warning">
+        <div  class="alert alert-warning">
           
               <h4 class="text-left">¿Que es City Tour Antigua Guatemala?</h4>
               <p class="text-justify"> 
